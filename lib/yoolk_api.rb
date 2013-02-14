@@ -25,7 +25,7 @@ module YoolkApi
   autoload :Client,   'yoolk_api/client'
   autoload :Resource, 'yoolk_api/resource'
   autoload :Portal,   'yoolk_api/resources/portal'
-  autoload :Portal,   'yoolk_api/resources/listing'
-  autoload :Portal,   'yoolk_api/resources/location'
-  autoload :Portal,   'yoolk_api/resources/category'
+  autoload :Listing,  'yoolk_api/resources/listing'
+  autoload :Location, 'yoolk_api/resources/location'
+  autoload :Category, 'yoolk_api/resources/category'
 end
