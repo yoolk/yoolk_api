@@ -1,5 +1,5 @@
 module YoolkApi
-  class Portal < Resource
+  class Portal < Resource::Base
     delegate :code,
              prefix: true, to: :currency, allow_nil: true
     has_many :locations,  class: 'Location'

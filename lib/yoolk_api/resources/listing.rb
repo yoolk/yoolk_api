@@ -1,4 +1,4 @@
 module YoolkApi
-  class Listing < Resource
+  class Listing < Resource::Base
   end
 end
