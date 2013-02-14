@@ -8,6 +8,14 @@ module YoolkApi
         @attributes = Hashie::Mash.new(attributes)
       end
 
+      def identity
+        alias_id || id
+      end
+
+      def resource_name
+        self.class.resource_name
+      end
+
       class << self
         def find(identity)
           member YoolkApi.client.get("/#{resource_name}/#{identity}")
@@ -36,8 +44,12 @@ module YoolkApi
       end
 
       private
-      def method_missing(*args, &block)
-        @attributes.send(*args, &block)
+      def method_missing(method, *args, &block)
+        if @attributes.key?(method)
+          @attributes.send(method, *args, &block)
+        else
+          super
+        end
       end
     end
   end

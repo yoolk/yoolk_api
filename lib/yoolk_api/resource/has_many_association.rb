@@ -19,7 +19,8 @@ module YoolkApi::Resource::HasManyAssociation
           instances = if attributes.key?(association_name)
             self.class.collection attributes[association_name]
           else
-            self.class.collection YoolkApi.client.get("/#{resource_name}/#{identity}/#{association_name}")
+            association_uri = options[:uri] || "/#{resource_name}/#{identity}/#{association_name}"
+            self.class.collection YoolkApi.client.get(association_uri)
           end
           instance_variable_set("@#{association_name}_has_many_instances", instances)
         end
