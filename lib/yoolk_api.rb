@@ -22,6 +22,22 @@ module YoolkApi
     end
   end
 
+  class StdoutLogger
+    def initialize(debug)
+      @debug = debug
+    end
+
+    def log(message, env)
+      begin
+        puts "\n==> #{message}\n\n"
+        puts "\n==> #{env[:method].to_s.upcase} #{env[:url]} \n\n" if @debug
+        yield
+      ensure
+        puts "\n== (#{env[:status]}) ==> #{env[:body]}\n\n" if @debug
+      end
+    end
+  end
+
   autoload :Client,             'yoolk_api/client'
   autoload :Resource,           'yoolk_api/resource'
   autoload :HasManyAssociation, 'yoolk_api/has_many_association'

@@ -3,8 +3,7 @@ require 'spec_helper'
 describe 'Portal' do
   before(:all) do
     YoolkApi.setup(
-      domain_name: 'cambodiastaging.yoolk.com',
-      per_page: 30
+      domain_name: 'cambodiastaging.yoolk.com'
     )
   end
 

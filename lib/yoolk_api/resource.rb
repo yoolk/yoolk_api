@@ -36,19 +36,6 @@ module YoolkApi
         new(response['data'])
       end
 
-      def collection(response)
-        paging = response['paging']
-        result = OpenStruct.new(
-          all: response['data'],
-          total_entries: paging['total_entries'],
-          total_pages: paging['total_pages'],
-          per_page: paging['per_page'],
-          current_page: paging['current_page']
-        )
-        result.all.map! { |item| new(item) }
-        result
-      end
-
       def api_path(identity, query={})
         "/#{resource_name}/#{identity}?#{query.to_query}".gsub(/\?$/, '')
       end
