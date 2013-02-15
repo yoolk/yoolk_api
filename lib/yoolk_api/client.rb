@@ -12,8 +12,8 @@ module YoolkApi
       @logger      = options[:logger] || StdoutLogger.new(options[:debug])
     end
 
-    def log(env, &block)
-      @logger.log(env, &block)
+    def log(env, message, &block)
+      @logger.log(env, message, &block)
     end
 
     def get(path)
@@ -24,21 +24,22 @@ module YoolkApi
         status: response.code,
         body: response.body
       }
+      
       if response.success?
         begin
           JSON.parse(response.body)
         rescue JSON::ParserError => exception
-          log(exception.message, env)
+          log(env, exception.message)
           nil
         end
       elsif response.timed_out?
-        log('Request is time out', env)
+        log(env, 'Request is timed out')
         nil
       elsif response.code == 0
-        log(response.curl_error_message, env)
+        log(env, 'Curl error message')
         nil
       else
-        log(nil, env)
+        log(env)
         nil
       end
     end
