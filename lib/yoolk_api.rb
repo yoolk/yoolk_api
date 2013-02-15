@@ -24,6 +24,8 @@ module YoolkApi
 
   autoload :Client,             'yoolk_api/client'
   autoload :Resource,           'yoolk_api/resource'
+  autoload :HasManyAssociation, 'yoolk_api/has_many_association'
+
   autoload :Portal,             'yoolk_api/resources/portal'
   autoload :Listing,            'yoolk_api/resources/listing'
   autoload :Location,           'yoolk_api/resources/location'
