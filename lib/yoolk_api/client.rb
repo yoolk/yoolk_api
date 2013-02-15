@@ -29,18 +29,24 @@ module YoolkApi
         begin
           JSON.parse(response.body)
         rescue JSON::ParserError => exception
-          log(env, exception.message)
-          nil
+          raise JsonError.new(env[:body], env[:status], env[:url])
         end
       elsif response.timed_out?
-        log(env, 'Request is timed out')
-        nil
+        raise NetworkError.new(env[:body], env[:status], env[:url])
       elsif response.code == 0
-        log(env, 'Curl error message')
-        nil
+        raise NetworkError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 400
+        raise BadRequestError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 401
+        raise AuthorizationError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 404
+        raise NotFoundError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 502 or response.code == 503
+        raise UnavailableError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 500
+        raise ServerError.new(env[:body], env[:status], env[:url])
       else
-        log(env)
-        nil
+        raise ServerError.new(env[:body], env[:status], env[:url])
       end
     end
   end

@@ -1,4 +1,5 @@
 require "yoolk_api/version"
+require "yoolk_api/error"
 
 module YoolkApi
   class << self
