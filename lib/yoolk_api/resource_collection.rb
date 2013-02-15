@@ -1,37 +1,41 @@
 module YoolkApi
   class ResourceCollection
-    attr_reader :klass, :api_path, :response, :query, :resources
+    attr_reader :klass, :api_path, :query, :resources,
+                :current_page, :total_entries, :total_pages, :per_page
 
-    def initialize(klass, api_path, response={})
+    def initialize(klass, api_path)
       @klass        = klass
       @api_path     = api_path
-      self.response = response
       @query        = {}
     end
 
     def q(value)
-      query.merge!(q: value)
+      @query.merge!(q: value)
       self
     end
 
     def fields(value)
-      query[:fields] = query[:fields].to_s + ",#{value}"
-      query[:fields] = query[:fields].gsub(/^,/, '')
+      @query[:fields] = @query[:fields].to_s + ",#{value}"
+      @query[:fields] = @query[:fields].gsub(/^,/, '')
       self
     end
 
     def page(value)
-      query.merge!(page: value)
+      @query.merge!(page: value)
       self
     end
 
     def per_page(value=nil)
       if value.nil?
-        response['paging']['per_page']
+        @per_page
       else
-        query.merge!(per_page: value)
+        @query.merge!(per_page: value)
         self
       end
+    end
+
+    def reset_query
+      @query = {}
     end
 
     def inspect
@@ -41,14 +45,20 @@ module YoolkApi
     def to_a
       return @resources if loaded?
 
-      self.response = YoolkApi.client.get(to_api_path)
+      set_response(YoolkApi.client.get(to_api_path))
       @resources
     end
     alias :to_ary :to_a
 
-    def response=(response)
-      @response  = response
-      @resources = @response['data'].collect { |item| klass.new(item) } if response.present? and response.key?('data')
+    def set_response(response)
+      return if response.blank?
+
+      @query_cache    = @query.dup
+      @resources      = response['data'].collect { |item| klass.new(item) }
+      @current_page   = response['paging']['current_page']
+      @total_entries  = response['paging']['total_entries']
+      @total_pages    = response['paging']['total_pages']
+      @per_page       = response['paging']['per_page']
     end
 
     def to_api_path
@@ -60,11 +70,11 @@ module YoolkApi
     end
 
     def loaded?
-      @resources.present?
+      @query_cache == @query
     end
 
-    def current_page
-      response['paging']['current_page']
+    def count
+      total_entries
     end
 
     def next_page
@@ -73,16 +83,6 @@ module YoolkApi
 
     def previous_page
       current_page > 1 ? (current_page - 1) : nil
-    end
-
-    def total_entries
-      response['paging']['total_entries']
-    end
-    alias :total_count :total_entries
-    alias :count :total_entries
-
-    def total_pages
-      response['paging']['total_pages']
     end
 
     def offset

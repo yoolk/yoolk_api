@@ -18,8 +18,11 @@ module YoolkApi
           resource_collection = instance_variable_get("@#{association_name}_resource_collection")
 
           if resource_collection.nil?
-            resource_collection = ResourceCollection.new(association_klass, association_path, attributes[association_name])
+            resource_collection = ResourceCollection.new(association_klass, association_path)
+            resource_collection.set_response(attributes[association_name])
             instance_variable_set("@#{association_name}_resource_collection", resource_collection)
+          else
+            resource_collection.reset_query
           end
           resource_collection
         end

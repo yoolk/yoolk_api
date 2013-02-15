@@ -84,6 +84,21 @@ describe 'Resource' do
       @portal.listings.loaded?.should == true
     end
 
+    it "#loaded? return false after changing query" do
+      @portal.listings.to_a
+      @portal.listings.loaded?.should == true
+
+      @portal.listings.per_page(1).to_a
+      @portal.listings.per_page(1).loaded?.should == true
+
+      @portal.listings.loaded?.should == false
+      @portal.listings.to_a
+      @portal.listings.loaded?.should == true
+
+      @portal.listings.per_page(1).to_a
+      @portal.listings.per_page(1).loaded?.should == true
+    end
+
     it "should chaining the query: #per_page" do
       relation = @portal.categories.per_page(10)
 
