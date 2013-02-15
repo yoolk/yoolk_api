@@ -17,8 +17,8 @@ module YoolkApi
       end
 
       class << self
-        def find(identity)
-          member YoolkApi.client.get("/#{resource_name}/#{identity}")
+        def find(identity, query={})
+          member YoolkApi.client.get(api_path(identity, query))
         end
 
         def resource_name
@@ -40,6 +40,10 @@ module YoolkApi
           )
           result.all.map! { |item| new(item) }
           result
+        end
+
+        def api_path(identity, query={})
+          "/#{resource_name}/#{identity}?#{query.to_query}".gsub(/\?$/, '')
         end
       end
 
