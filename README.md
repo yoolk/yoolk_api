@@ -62,16 +62,16 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
 
 All unsuccessful responses returned by the API (everything that has a 4xx or 5xx HTTP status code) will throw exceptions. All exceptions inherit from YoolkApi::Error and have three additional properties which give you more information about the error:
 
-begin
-  YoolkApi::Listing.find('not_found')
-rescue YoolkApi::NotFoundError => exc
-  puts exc.response_body      # parsed JSON response from the API
-  puts exc.response_status    # status code of the response
-  puts exc.url                # uri of the API request
+    begin
+      YoolkApi::Listing.find('not_found')
+    rescue YoolkApi::NotFoundError => exc
+      puts exc.response_body      # parsed JSON response from the API
+      puts exc.response_status    # status code of the response
+      puts exc.url                # uri of the API request
 
-  # you normally want this one, a human readable error description
-  puts exc.response_body['error']
-end
+      # you normally want this one, a human readable error description
+      puts exc.response_body['message']
+    end
 
 ## Authors
 
