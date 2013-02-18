@@ -13,9 +13,12 @@ module YoolkApi
     class << self
       undef_method :find
 
-      def current
-        result = YoolkApi.client.get("/")
-        new(result['data']) if result
+      def current(query={})
+        member YoolkApi.client.get(api_path(query))
+      end
+
+      def api_path(query={})
+        "/?#{query.to_query}".gsub(/\?$/, '')
       end
     end
   end

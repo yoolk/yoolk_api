@@ -12,8 +12,8 @@ module YoolkApi
       @logger      = options[:logger] || StdoutLogger.new(options[:debug])
     end
 
-    def log(env, &block)
-      @logger.log(env, &block)
+    def log(env, message, &block)
+      @logger.log(env, message, &block)
     end
 
     def get(path)
@@ -24,22 +24,29 @@ module YoolkApi
         status: response.code,
         body: response.body
       }
+      
       if response.success?
         begin
           JSON.parse(response.body)
         rescue JSON::ParserError => exception
-          log(exception.message, env)
-          nil
+          raise JsonError.new(env[:body], env[:status], env[:url])
         end
       elsif response.timed_out?
-        log('Request is time out', env)
-        nil
+        raise NetworkError.new(env[:body], env[:status], env[:url])
       elsif response.code == 0
-        log(response.curl_error_message, env)
-        nil
+        raise NetworkError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 400
+        raise BadRequestError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 401
+        raise AuthorizationError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 404
+        raise NotFoundError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 502 or response.code == 503
+        raise UnavailableError.new(env[:body], env[:status], env[:url])
+      elsif response.code == 500
+        raise ServerError.new(env[:body], env[:status], env[:url])
       else
-        log(nil, env)
-        nil
+        raise ServerError.new(env[:body], env[:status], env[:url])
       end
     end
   end

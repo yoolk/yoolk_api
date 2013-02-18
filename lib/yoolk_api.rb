@@ -1,4 +1,5 @@
 require "yoolk_api/version"
+require "yoolk_api/error"
 
 module YoolkApi
   class << self
@@ -27,11 +28,11 @@ module YoolkApi
       @debug = debug
     end
 
-    def log(message, env)
+    def log(env, message="")
       begin
-        puts "\n==> #{message}\n\n"
+        puts "\n==> #{message}\n\n" if message
         puts "\n==> #{env[:method].to_s.upcase} #{env[:url]} \n\n" if @debug
-        yield
+        yield if block_given?
       ensure
         puts "\n== (#{env[:status]}) ==> #{env[:body]}\n\n" if @debug
       end
