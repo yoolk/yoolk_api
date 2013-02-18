@@ -62,13 +62,13 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
 
 While the models can be used directly from this gem, we encourage everyone using YoolkApi in a Rails project to add models that extend the standard models:
 
-class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem
+    class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem
 
-  # Your custom methods, e.g.:
-  def code
-    alias_id.to_s.gsub(/\D/, '')
-  end
-end
+      # Your custom methods, e.g.:
+      def code
+        alias_id.to_s.gsub(/\D/, '')
+      end
+    end
 
 ## Error Handling
 
