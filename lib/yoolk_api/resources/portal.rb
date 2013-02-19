@@ -14,7 +14,12 @@ module YoolkApi
       undef_method :find
 
       def current(query={})
-        member YoolkApi.client.get(api_path(query))
+        begin
+          response = YoolkApi.client.get(api_path(query))
+        rescue JsonError, NetworkError, BadRequestError => exception
+          raise NotFoundError.new(exception.response_body, exception.response_status, exception.url)
+        end
+        member response
       end
 
       def api_path(query={})
