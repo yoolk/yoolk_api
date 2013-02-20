@@ -58,18 +58,6 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
     listings.offset
     listings.page_offset
 
-## Rails
-
-While the models can be used directly from this gem, we encourage everyone using YoolkApi in a Rails project to add models that extend the standard models:
-
-    class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem
-
-      # Your custom methods, e.g.:
-      def code
-        alias_id.to_s.gsub(/\D/, '')
-      end
-    end
-
 ## Error Handling
 
 All unsuccessful responses returned by the API (everything that has a 4xx or 5xx HTTP status code) will throw exceptions. All exceptions inherit from YoolkApi::Error and have three additional properties which give you more information about the error:
@@ -83,6 +71,36 @@ All unsuccessful responses returned by the API (everything that has a 4xx or 5xx
 
       # you normally want this one, a human readable error description
       puts exc.response_body['message']
+    end
+
+## Rails
+
+While the models can be used directly from this gem, we encourage everyone using YoolkApi in a Rails project to add models that extend the standard models:
+
+    class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem
+
+      # Your custom methods, e.g.:
+      def code
+        alias_id.to_s.gsub(/\D/, '')
+      end
+    end
+
+It's such a good idea to catch all exceptions that this gem will raise. Please check out `error.rb` to see all exceptions. In your `application_controller.rb`, use `rescue_from` to catch these exceptions:
+
+    class ApplicationController < ActionController::Base
+      rescue_from YoolkApi::NotFoundError,
+                  YoolkApi::JsonError,
+                  YoolkApi::NetworkError,
+                  YoolkApi::AuthorizationError,
+                  YoolkApi::BadRequestError,
+                  YoolkApi::ServerError,
+                  YoolkApi::UnavailableError,
+                  with: :render_api_error
+
+      protected
+      def render_api_error
+        render 'public/api_error', layout: false
+      end
     end
 
 ## Authors
