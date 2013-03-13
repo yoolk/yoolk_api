@@ -24,5 +24,9 @@ describe 'Location' do
       location.id.should == '01834EE1-FA95-48DE-831A-3D3C05DD3AFC'
       location.alias_id.should == 'kh2'
     end
+
+    it "should raise 404 when identity is blank" do
+      expect { YoolkApi::Location.find(nil) }.to raise_error(YoolkApi::NotFoundError)
+    end
   end
 end

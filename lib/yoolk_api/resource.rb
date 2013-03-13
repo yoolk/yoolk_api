@@ -25,6 +25,8 @@ module YoolkApi
 
     class << self
       def find(identity, query={})
+        raise YoolkApi::NotFoundError.new(nil, 404, api_path) if identity.blank?
+        
         member YoolkApi.client.get(api_path(identity, query))
       end
 
@@ -36,7 +38,7 @@ module YoolkApi
         new(response['data'])
       end
 
-      def api_path(identity, query={})
+      def api_path(identity='', query={})
         "/#{resource_name}/#{identity}?#{query.to_query}".gsub(/\?$/, '')
       end
     end
