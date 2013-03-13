@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Resource' do
   before(:all) do
     YoolkApi.setup(
-      domain_name: 'cambodiastaging.yoolk.com'
+      domain_name: 'yellowpages-cambodia.dev:3000'
     )
   end
 
@@ -22,7 +22,7 @@ describe 'Resource' do
       portal = YoolkApi::Portal.current
 
       portal.attributes.should be_an_instance_of(Hashie::Mash)
-      portal.domain_name.should == 'cambodiastaging.yoolk.com'
+      portal.domain_name.should == 'yellowpages-cambodia.dev'
       portal.address_templates.length.should == 3
       portal.address_templates[0].id.should == '346B9048-8755-11E0-A31D-123141003441'
     end

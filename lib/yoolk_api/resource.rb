@@ -11,6 +11,9 @@ module YoolkApi
     include HasManyAssociation
     attr_reader :attributes
 
+    delegate :resource_name, :member,
+             to: 'self.class'
+
     def initialize(attributes)
       @attributes = Hashie::Mash.new(attributes)
     end
@@ -19,14 +22,10 @@ module YoolkApi
       alias_id || id
     end
 
-    def resource_name
-      self.class.resource_name
-    end
-
     class << self
       def find(identity, query={})
         raise YoolkApi::NotFoundError.new(nil, 404, api_path) if identity.blank?
-        
+
         member YoolkApi.client.get(api_path(identity, query))
       end
 
