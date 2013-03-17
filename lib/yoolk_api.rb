@@ -1,5 +1,11 @@
-require "yoolk_api/version"
-require "yoolk_api/error"
+require 'yoolk_api/version'
+require 'yoolk_api/error'
+require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/object/to_query'
+require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/module/delegation'
+require 'active_support/core_ext/array/wrap'
+require 'active_support/concern'
 
 module YoolkApi
   class << self
@@ -40,8 +46,15 @@ module YoolkApi
   end
 
   autoload :Client,             'yoolk_api/client'
-  autoload :Resource,           'yoolk_api/resource'
+  autoload :ResourceModel,      'yoolk_api/resource_model'
   autoload :HasManyAssociation, 'yoolk_api/has_many_association'
+  autoload :Resource,           'yoolk_api/resource'
+
+  autoload :ImageResource,      'yoolk_api/image_resource'
+  autoload :Logo,               'yoolk_api/image_resources/logo'
+  autoload :Artwork,            'yoolk_api/image_resources/artwork'
+  autoload :CatalogItem,        'yoolk_api/image_resources/catalog_item'
+  autoload :GalleryImage,       'yoolk_api/image_resources/gallery_image'
 
   autoload :Portal,             'yoolk_api/resources/portal'
   autoload :Listing,            'yoolk_api/resources/listing'
