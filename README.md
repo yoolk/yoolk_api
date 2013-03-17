@@ -20,7 +20,7 @@ The main way of using the YoolkApi library is via a singleton client, which you 
 
 This initializes a `YoolkApi::Client` object and assigns it to a thread-local, which is used by all methods in this library.
 
-## Basic Usage
+## API Summary
 
 The Yoolk API is based on REST requests passing JSON back and forth, but we have tried to make the use of this client an experience more similar to using ActiveRecord from Rails.
 
@@ -37,9 +37,20 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
 
     # Relation
     portal.listings         # Fetch listings under this portal
+    portal.categories       # Fetch categories under this portal
+    portal.locations        # Fetch locations under this portal
+
     category.sub_categories # Fetch its sub_categories
     sub_category.listings   # Fetch listings under this category
+    sub_category.parent     # Fetch parent category
+
     location.listings       # Fetch listings under this location
+
+    # Return all images size
+    listing.logo.images
+
+    # Return only original images, applied the same to #catalog_items, #gallery_images, and #artworks
+    listing.logo.images(:original)
 
     # Chaining
     portal.listings
