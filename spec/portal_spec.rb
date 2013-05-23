@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Portal' do
+describe 'Account' do
   before(:all) do
     YoolkApi.setup(
       domain_name: 'yellowpages-cambodia.dev:3000'
@@ -9,13 +9,13 @@ describe 'Portal' do
 
   context "Methods" do
     it "should not have method find" do
-      YoolkApi::Portal.methods.should_not include(:find)
+      YoolkApi::Account.methods.should_not include(:find)
     end
 
-    it "should return currency_code" do
-      portal = YoolkApi::Portal.current
+    it "should return info about current account" do
+      account = YoolkApi::Account.me(auth_token: 'gTq7dHBUMzLxGv3oYNiy')
 
-      portal.currency_code.should == 'USD'
+      account.email.should == 'chamnap@yoolk.com'
     end
   end
 end
