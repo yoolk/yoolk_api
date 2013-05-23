@@ -55,6 +55,7 @@ module YoolkApi
   autoload :Artwork,            'yoolk_api/image_resources/artwork'
   autoload :CatalogItem,        'yoolk_api/image_resources/catalog_item'
   autoload :GalleryImage,       'yoolk_api/image_resources/gallery_image'
+  autoload :Person,             'yoolk_api/image_resources/person'
 
   autoload :Portal,             'yoolk_api/resources/portal'
   autoload :Listing,            'yoolk_api/resources/listing'
