@@ -4,6 +4,10 @@ This is the official Ruby client for accessing the Yoolk Portal REST API. It als
 
 ## Installation
 
+This gem depends on [typhoeus](https://github.com/typhoeus/typhoeus) which uses `libcurl` library. On Ubuntu 12.04, you should install:
+
+    $ sudo apt-get install -y curl libcurl4-gnutls-dev
+
 Add this line to your application's Gemfile:
 
     gem 'yoolk_api', :git => 'git://github.com/yoolk/yoolk_api.git'
@@ -51,6 +55,9 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
 
     # Return only original images, applied the same to #catalog_items, #gallery_images, #artworks, and #people
     listing.logo.images(:original)
+
+    # Get information about current account
+    YoolkApi::Account.me
 
     # Chaining
     portal.listings
