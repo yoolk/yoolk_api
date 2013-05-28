@@ -57,7 +57,9 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
     listing.logo.images(:original)
 
     # Get information about current account
-    YoolkApi::Account.me
+    current_account = YoolkApi::Account.me
+    current_account.yoolk_admin?
+    current_account.has_portal_role?('Portal Admin')
 
     # Chaining
     portal.listings

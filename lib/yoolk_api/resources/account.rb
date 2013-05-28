@@ -1,6 +1,23 @@
 module YoolkApi
   class Account < Resource
 
+    def yoolk_admin?
+      roles.find { |role| role.name == 'Yoolk Admin' }.present?
+    end
+
+    def has_portal_role?(role_name)
+      roles.find do |role|
+        role.name == role_name and role.resource_type == "Portal" and
+        role.resource.domain_name == YoolkApi.client.domain_name
+      end.present?
+    end
+
+    def has_listing_role?(role_name)
+      roles.find do |role|
+        role.name == role_name and role.resource_type == "Listing"
+      end.present?
+    end
+
     class << self
       undef_method :find
 
