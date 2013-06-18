@@ -99,6 +99,17 @@ All unsuccessful responses returned by the API (everything that has a 4xx or 5xx
 
 ## Rails
 
+Because `YoolkApi::Client` is the current thread variable, it's advisable to set to `nil` after processing controller action. This can be easily achievable by using `around_filter` inside `application_controller.rb`.
+
+    class ApplicationController < ActionController::Base
+      around_filter :setup_yoolk_api
+
+      protected
+      def setup_yoolk_api(&block)
+        YoolkApi.with_client({domain_name: params[:domain_name]}, &block)
+      end
+    end
+
 While the models can be used directly from this gem, we encourage everyone using YoolkApi in a Rails project to add models that extend the standard models:
 
     class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem

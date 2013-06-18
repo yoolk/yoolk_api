@@ -21,11 +21,16 @@ module YoolkApi
       Thread.current[:yoolk_client] = new_client
     end
 
-    def with_client
-      old_client = YoolkApi.client.try(:dup)
-      yield
-    ensure
-      YoolkApi.client = old_client
+    def with_client(options={}, &block)
+      raise ArgumentError, "block required" if block.nil?
+
+      begin
+        old_client, YoolkApi.client = YoolkApi.client, YoolkApi::Client.new(options)
+        
+        block.call
+      ensure
+        YoolkApi.client = old_client
+      end
     end
   end
 
