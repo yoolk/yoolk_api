@@ -62,6 +62,7 @@ module YoolkApi
   autoload :Location,           'yoolk_api/resources/location'
   autoload :Category,           'yoolk_api/resources/category'
   autoload :Account,            'yoolk_api/resources/account'
+  autoload :ImageGallery,       'yoolk_api/resources/image_gallery'
 
   autoload :ResourceCollection, 'yoolk_api/resource_collection'
 end

@@ -32,4 +32,18 @@ describe 'Portal' do
       @listing.artworks[0].should be_instance_of(YoolkApi::Artwork)
     end
   end
+
+  context "ImageGallery" do
+    it "#image_galleries should be an array of YoolkApi::ImageGallery" do
+      @listing.image_galleries.should be_instance_of(Array)
+      @listing.image_galleries[0].should be_instance_of(YoolkApi::ImageGallery)
+    end
+
+    it "#gallery_images should be an arry of YoolkApi::GalleryImage" do
+      image_gallery = @listing.image_galleries[0]
+
+      image_gallery.gallery_images.should be_instance_of(Array)
+      image_gallery.gallery_images[0].should be_instance_of(YoolkApi::GalleryImage)
+    end
+  end
 end

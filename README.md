@@ -10,7 +10,7 @@ This gem depends on [typhoeus](https://github.com/typhoeus/typhoeus) which uses 
 
 Add this line to your application's Gemfile:
 
-    gem 'yoolk_api', :git => 'git://github.com/yoolk/yoolk_api.git'
+    gem 'yoolk_api', git: 'git://github.com/yoolk/yoolk_api.git'
 
 And then execute:
 
@@ -55,6 +55,10 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
 
     # Return only original images, applied the same to #catalog_items, #gallery_images, #artworks, and #people
     listing.logo.images(:original)
+
+    # Image_galleries and gallery_images
+    listing.image_galleries[0].name
+    listing.image_galleries[0].gallery_images
 
     # Get information about current account
     current_account = YoolkApi::Account.me
