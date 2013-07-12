@@ -1,8 +1,6 @@
 module YoolkApi
   class Listing < Resource
     has_many :categories, class: 'Category'
-    attr_reader :logo, :artworks, :catalog_items, :gallery_images, :people
-    attr_reader :image_galleries
 
     def logo
       return @logo if @logo
@@ -58,6 +56,36 @@ module YoolkApi
         YoolkApi::ImageGallery.new(image_gallery, group_by[image_gallery['id']])
       end
       @image_galleries
+    end
+
+    def products
+      return @products if @products
+
+      products  = attributes['products'] || []
+      @products = products.collect { |product| YoolkApi::Product.new(product) }
+      @products
+    end
+
+    def product_categories
+      return @product_categories if @product_categories
+
+      product_categories  = attributes['product_categories'] || []
+      group_by            = products.group_by { |product_category| product_category.category.id }
+      @product_categories = product_categories.collect do |product_category| 
+        YoolkApi::Product::Category.new(product_category, group_by[product_category['id']])
+      end
+      @product_categories
+    end
+
+    def product_brands
+      return @product_brands if @product_brands
+
+      product_brands  = attributes['product_brands'] || []
+      group_by        = products.group_by { |product_brand| product_brand.brand.id }
+      @product_brands = product_brands.collect do |product_brand| 
+        YoolkApi::Product::Brand.new(product_brand, group_by[product_brand['id']])
+      end
+      @product_brands
     end
   end
 end

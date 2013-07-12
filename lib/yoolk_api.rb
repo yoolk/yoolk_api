@@ -68,5 +68,7 @@ module YoolkApi
   autoload :GalleryImage,       'yoolk_api/resources/gallery_image'
   autoload :Person,             'yoolk_api/resources/person'
 
+  autoload :Product,            'yoolk_api/resources/product'
+
   autoload :ResourceCollection, 'yoolk_api/resource_collection'
 end
