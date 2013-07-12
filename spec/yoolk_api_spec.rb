@@ -3,7 +3,7 @@ require 'spec_helper'
 describe YoolkApi do
   context "#with_client" do
     it "use that client within that block" do
-      YoolkApi.client.should == nil
+      YoolkApi.client = nil
 
       YoolkApi.with_client(domain_name: 'yp.com.kh') do
         YoolkApi.client.domain_name.should == 'yp.com.kh'
