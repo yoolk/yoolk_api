@@ -1,5 +1,5 @@
 module YoolkApi
-  module ResourceImage
+  module Resource::Image
     extend ActiveSupport::Concern
 
     included do

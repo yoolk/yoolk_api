@@ -2,8 +2,13 @@ require 'hashie/mash'
 
 module YoolkApi
   class Resource
-    include ResourceModel
-    include HasManyAssociation
+    autoload :Model,      'yoolk_api/resource/model'
+    autoload :Image,      'yoolk_api/resource/image'
+    autoload :HasMany,    'yoolk_api/resource/has_many'
+    autoload :Collection, 'yoolk_api/resource/collection'
+
+    include Model
+    include HasMany
 
     delegate :resource_name, :member,
              to: 'self.class'

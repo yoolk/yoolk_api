@@ -1,5 +1,5 @@
 module YoolkApi
-  module ResourceModel
+  module Resource::Model
     extend ActiveSupport::Concern
 
     included do

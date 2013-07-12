@@ -1,5 +1,5 @@
 module YoolkApi
   class Artwork < SubResource
-    include ResourceImage
+    include Resource::Image
   end
 end

@@ -1,5 +1,5 @@
 module YoolkApi
-  class ResourceCollection
+  class Resource::Collection
     attr_reader :klass, :api_path, :query, :resources,
                 :current_page, :total_entries, :total_pages, :per_page
 

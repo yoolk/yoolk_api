@@ -28,12 +28,12 @@ describe 'Resource', :vcr do
     end
 
     it "should return locations (already included)" do
-      @portal.locations.should be_an_instance_of(YoolkApi::ResourceCollection)
+      @portal.locations.should be_an_instance_of(YoolkApi::Resource::Collection)
       @portal.locations.length.should == 25
     end
 
     it "should return listings (not included)" do
-      @portal.listings.should be_an_instance_of(YoolkApi::ResourceCollection)
+      @portal.listings.should be_an_instance_of(YoolkApi::Resource::Collection)
 
       @portal.listings.length.should == 25
     end
@@ -43,7 +43,7 @@ describe 'Resource', :vcr do
 
       @portal.categories
 
-      @portal.instance_variable_get(:@categories_resource_collection).should be_an_instance_of(YoolkApi::ResourceCollection)
+      @portal.instance_variable_get(:@categories_resource_collection).should be_an_instance_of(YoolkApi::Resource::Collection)
     end
 
     it "should return true if there is association data" do
