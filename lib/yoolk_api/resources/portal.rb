@@ -2,9 +2,9 @@ module YoolkApi
   class Portal < Resource
     delegate :code,
              prefix: true, to: :currency, allow_nil: true
-    has_many :locations,  class: 'Location', api_path: '/locations'
-    has_many :categories, class: 'Category', api_path: '/categories'
-    has_many :listings,   class: 'Listing',  api_path: '/listings'
+    has_many :locations,  class_name: 'Location', api_path: '/locations'
+    has_many :categories, class_name: 'Category', api_path: '/categories'
+    has_many :listings,   class_name: 'Listing',  api_path: '/listings'
 
     def identity
       domain_name || id

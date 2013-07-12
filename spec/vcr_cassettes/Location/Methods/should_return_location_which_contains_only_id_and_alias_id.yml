@@ -23,9 +23,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c92e4c3c0c53f7250547a725814f0a1
+      - e88ba2b6260ac938a1823a9eaaa175b6
       X-Runtime:
-      - '0.038627'
+      - '0.037952'
       Connection:
       - close
       Server:
@@ -34,5 +34,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"alias_id":"kh2","id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC"},"links":{"listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Fri, 12 Jul 2013 16:28:24 GMT
+recorded_with: VCR 2.5.0

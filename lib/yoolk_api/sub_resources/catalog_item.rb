@@ -1,5 +1,5 @@
 module YoolkApi
   class CatalogItem < SubResource
-    include Resource::Image
+    include Resource::ImageMethods
   end
 end

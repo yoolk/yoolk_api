@@ -1,15 +1,17 @@
 module YoolkApi
   class Product < SubResource
-    autoload :Photo,            'yoolk_api/resources/product/photo'
-    autoload :Category,         'yoolk_api/resources/product/category'
-    autoload :Brand,            'yoolk_api/resources/product/brand'
+    autoload :Photo,            'yoolk_api/sub_resources/product/photo'
+    autoload :Category,         'yoolk_api/sub_resources/product/category'
+    autoload :Brand,            'yoolk_api/sub_resources/product/brand'
 
-    def photos
-      return @photos if @photos
+    sub_resource :photos, class_name: 'Product::Photo'
 
-      photos  = attributes['photos'] || []
-      @photos = photos.collect { |photo| Photo.new(photo) }
-      @photos
+    def product_category
+      category
+    end
+
+    def product_brand
+      brand
     end
   end
 end

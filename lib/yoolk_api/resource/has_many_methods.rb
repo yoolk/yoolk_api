@@ -1,11 +1,11 @@
 module YoolkApi
-  module Resource::HasMany
+  module Resource::HasManyMethods
     extend ActiveSupport::Concern
 
     included do
       def klass_for_association(options)
-        klass_name = options[:class]
-        raise "Missing class name of associated model. Provide with :class => 'MyClass'." unless klass_name.present?
+        klass_name = options[:class_name]
+        raise "Missing class name of associated model. Provide with class_name: 'MyClass'." unless klass_name.present?
         return self.class.klass_from_string(klass_name)
       end
     end
@@ -30,12 +30,6 @@ module YoolkApi
         define_method("#{association_name}?") do
           send(association_name).length > 0
         end
-      end
-
-      def klass_from_string(klass_name)
-        klass = klass_name.constantize rescue nil
-        klass = "YoolkApi::#{klass_name}".constantize unless klass.respond_to?(:ancestors) && klass.ancestors.include?(YoolkApi::Resource)
-        klass
       end
     end
   end

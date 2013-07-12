@@ -23,9 +23,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5440d88d1673c8839061d299102d6da3
+      - 840969db0fbfc0d016c23a3c69c60450
       X-Runtime:
-      - '0.157987'
+      - '0.064040'
       Connection:
       - close
       Server:
@@ -68,5 +68,5 @@ http_interactions:
         Forwarding, Cargo, Transport"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"023
         725 419","updated_time":"2013-02-21T20:18:10+07:00","verify_status":"","web_style_assets":[],"website":"www.kamsab.com.kh","zoom_level":16,"id":"1CEBA092-9BB9-4A9D-AA48-ECE86D753605"}],"paging":{"total_entries":2,"total_pages":1,"per_page":25,"current_page":1}}},"links":{"listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Fri, 12 Jul 2013 16:28:24 GMT
+recorded_with: VCR 2.5.0

@@ -1,5 +1,5 @@
-require 'pry'
 require 'yoolk_api'
+require 'pry'
 require 'vcr'
 
 VCR.configure do |config|

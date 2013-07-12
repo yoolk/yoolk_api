@@ -1,7 +1,7 @@
 module YoolkApi
   class Category < Resource
-    has_many :listings, class: 'Listing'
-    has_many :sub_categories, class: 'Category'
+    has_many :listings, class_name: 'Listing'
+    has_many :sub_categories, class_name: 'Category'
 
     def parent
       return nil unless attributes.key?('parent_id')

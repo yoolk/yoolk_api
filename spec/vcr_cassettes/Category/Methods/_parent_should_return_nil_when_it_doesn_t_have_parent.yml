@@ -23,9 +23,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5030e8ca3e350a9486e324bd64ced966
+      - 87ab659cf6f233edc0afdc81a0ffd8d8
       X-Runtime:
-      - '0.041401'
+      - '0.041583'
       Connection:
       - close
       Server:
@@ -37,5 +37,5 @@ http_interactions:
         is the category to browse.","keyword":"","display_on_web":true,"listing_count":3082,"created_time":"2011-08-13T13:54:38+07:00","updated_time":"2013-05-03T10:35:24+07:00","see":{"id":"006A1EE7-4987-40FE-8F8D-56F9544355A2","alias_id":"kh12320","name":"Footwear
         Materials & Supplies"},"parent_id":null,"see_alsos":[],"listings":{"data":[],"paging":{"total_entries":0,"total_pages":1,"per_page":25,"current_page":1}}},"links":{"parent":"http://yellowpages-cambodia.dev:3000/api/v1/categories/kh77/parent","listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Fri, 12 Jul 2013 16:28:21 GMT
+recorded_with: VCR 2.5.0

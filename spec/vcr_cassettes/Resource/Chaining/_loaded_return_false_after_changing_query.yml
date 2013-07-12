@@ -23,9 +23,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - edaa60db0aaad27ca55b727f7f3bb223
+      - 91ca7795b28841a2c274ac8357c15d88
       X-Runtime:
-      - '0.219815'
+      - '0.183036'
       Connection:
       - close
       Server:
@@ -538,7 +538,7 @@ http_interactions:
         Services","short_name":"Scanning Services","description":"","keyword":"","display_on_web":true,"listing_count":0,"created_time":"2011-08-13T13:58:46+07:00","updated_time":"2013-05-03T11:05:19+07:00","sub_category_count":0},{"id":"FBAFB414-1863-4259-ABA2-C243CC24901F","alias_id":"kh12864","name":"Khmer
         Restaurants","short_name":"Khmer Restaurants","description":"","keyword":"","display_on_web":true,"listing_count":0,"created_time":"2011-08-13T13:57:13+07:00","updated_time":"2013-05-03T11:05:38+07:00","sub_category_count":0}],"paging":{"total_entries":985,"total_pages":40,"per_page":25,"current_page":1,"next":"http://yellowpages-cambodia.dev:3000/api/v1/categories?page=2&per_page=25"}}},"links":{"locations":"http://yellowpages-cambodia.dev:3000/api/v1/locations","categories":"http://yellowpages-cambodia.dev:3000/api/v1/categories","listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:54 GMT
+  recorded_at: Fri, 12 Jul 2013 16:28:25 GMT
 - request:
     method: get
     uri: http://yellowpages-cambodia.dev:3000/api/v1/listings
@@ -562,9 +562,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc01aff522e42eb5cf880245847d910f
+      - ea673f63de9028761b712f0e3d8848e1
       X-Runtime:
-      - '0.206324'
+      - '0.116456'
       Connection:
       - close
       Server:
@@ -2057,7 +2057,7 @@ http_interactions:
         Y2FtYm9kaWEuZGV2OjMwMDAvYXBpL3YxL2xpc3RpbmdzP3BhZ2U9MiZwZXJf
         cGFnZT0yNSJ9fQ==
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:55 GMT
+  recorded_at: Fri, 12 Jul 2013 16:28:26 GMT
 - request:
     method: get
     uri: http://yellowpages-cambodia.dev:3000/api/v1/listings?per_page=1
@@ -2081,9 +2081,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cca0ab546a22ae8f16f466014a65d257
+      - eb84f550204234474d8f95ee46b993d3
       X-Runtime:
-      - '0.041225'
+      - '0.040047'
       Connection:
       - close
       Server:
@@ -2108,7 +2108,7 @@ http_interactions:
         & International Restaurants"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"017
         777 715","updated_time":"2013-02-21T20:19:32+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":13,"id":"1890550D-2E29-4CCB-8225-88E8EDC1D540"}],"paging":{"total_entries":8003,"total_pages":8003,"per_page":1,"current_page":1,"next":"http://yellowpages-cambodia.dev:3000/api/v1/listings?page=2&per_page=1"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:55 GMT
+  recorded_at: Fri, 12 Jul 2013 16:28:26 GMT
 - request:
     method: get
     uri: http://yellowpages-cambodia.dev:3000/api/v1/listings
@@ -2132,9 +2132,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0a8c6dd1918b4ed884a37ff0d6e7a2cd
+      - 3ffe42ab25bd6fa96cbf695037930ea1
       X-Runtime:
-      - '0.219559'
+      - '0.192364'
       Connection:
       - close
       Server:
@@ -3627,7 +3627,7 @@ http_interactions:
         Y2FtYm9kaWEuZGV2OjMwMDAvYXBpL3YxL2xpc3RpbmdzP3BhZ2U9MiZwZXJf
         cGFnZT0yNSJ9fQ==
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:55 GMT
+  recorded_at: Fri, 12 Jul 2013 16:28:26 GMT
 - request:
     method: get
     uri: http://yellowpages-cambodia.dev:3000/api/v1/listings?per_page=1
@@ -3651,9 +3651,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6adf4354d5b243e42406832e0e01ac4
+      - 6c46430d299303fa3a899b6639dd75ab
       X-Runtime:
-      - '0.041577'
+      - '0.041219'
       Connection:
       - close
       Server:
@@ -3678,5 +3678,5 @@ http_interactions:
         & International Restaurants"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"017
         777 715","updated_time":"2013-02-21T20:19:32+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":13,"id":"1890550D-2E29-4CCB-8225-88E8EDC1D540"}],"paging":{"total_entries":8003,"total_pages":8003,"per_page":1,"current_page":1,"next":"http://yellowpages-cambodia.dev:3000/api/v1/listings?page=2&per_page=1"}}'
     http_version: 
-  recorded_at: Fri, 12 Jul 2013 08:38:55 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Fri, 12 Jul 2013 16:28:26 GMT
+recorded_with: VCR 2.5.0
