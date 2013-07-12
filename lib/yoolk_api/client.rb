@@ -8,8 +8,8 @@ module YoolkApi
     def initialize(options={})
       @domain_name = options[:domain_name]
       @version     = options[:version] || 'v1'
+      @logger      = options[:logger]  || StdoutLogger.new(options[:debug])
       @api_url     = "http://#{domain_name}/api/#{version}"
-      @logger      = options[:logger] || StdoutLogger.new(options[:debug])
     end
 
     def log(env, message, &block)
