@@ -1,5 +1,5 @@
 module YoolkApi
-  class Account < Resource
+  class Account < SubResource
 
     def yoolk_admin?
       roles.find { |role| role.name == 'Yoolk Admin' }.present?
@@ -19,8 +19,7 @@ module YoolkApi
     end
 
     class << self
-      undef_method :find
-
+      
       def me(query={})
         begin
           response = YoolkApi.client.get(api_path(query))

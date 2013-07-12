@@ -1,5 +1,5 @@
 module YoolkApi
-  class Person < Resource
+  class Artwork < SubResource
     include ResourceImage
   end
 end

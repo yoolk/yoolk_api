@@ -1,5 +1,5 @@
 module YoolkApi
-  class Product < Resource
+  class Product < SubResource
     autoload :Photo,            'yoolk_api/resources/product/photo'
     autoload :Category,         'yoolk_api/resources/product/category'
     autoload :Brand,            'yoolk_api/resources/product/brand'

@@ -1,5 +1,5 @@
 module YoolkApi
-  class Product::Photo < Resource
+  class GalleryImage < SubResource
     include ResourceImage
   end
 end

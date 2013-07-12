@@ -1,5 +1,5 @@
 module YoolkApi
-  class Logo < Resource
+  class Product::Photo < SubResource
     include ResourceImage
   end
 end

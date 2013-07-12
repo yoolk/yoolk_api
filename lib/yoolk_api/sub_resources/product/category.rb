@@ -1,5 +1,5 @@
 module YoolkApi
-  class Product::Brand < Resource
+  class Product::Category < SubResource
     attr_reader :products
     
     def initialize(attributes={}, products=[])

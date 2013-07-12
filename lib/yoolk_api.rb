@@ -52,23 +52,25 @@ module YoolkApi
 
   autoload :Client,             'yoolk_api/client'
   autoload :Resource,           'yoolk_api/resource'
+  autoload :SubResource,        'yoolk_api/sub_resource'
   autoload :ResourceModel,      'yoolk_api/resource_model'
   autoload :ResourceImage,      'yoolk_api/resource_image'
   autoload :HasManyAssociation, 'yoolk_api/has_many_association'
+  autoload :ResourceCollection, 'yoolk_api/resource_collection'
   
+  # resources
   autoload :Portal,             'yoolk_api/resources/portal'
   autoload :Listing,            'yoolk_api/resources/listing'
   autoload :Location,           'yoolk_api/resources/location'
   autoload :Category,           'yoolk_api/resources/category'
-  autoload :Account,            'yoolk_api/resources/account'
-  autoload :ImageGallery,       'yoolk_api/resources/image_gallery'
-  autoload :Logo,               'yoolk_api/resources/logo'
-  autoload :Artwork,            'yoolk_api/resources/artwork'
-  autoload :CatalogItem,        'yoolk_api/resources/catalog_item'
-  autoload :GalleryImage,       'yoolk_api/resources/gallery_image'
-  autoload :Person,             'yoolk_api/resources/person'
 
-  autoload :Product,            'yoolk_api/resources/product'
-
-  autoload :ResourceCollection, 'yoolk_api/resource_collection'
+  # sub_resources
+  autoload :Account,            'yoolk_api/sub_resources/account'
+  autoload :ImageGallery,       'yoolk_api/sub_resources/image_gallery'
+  autoload :Logo,               'yoolk_api/sub_resources/logo'
+  autoload :Artwork,            'yoolk_api/sub_resources/artwork'
+  autoload :CatalogItem,        'yoolk_api/sub_resources/catalog_item'
+  autoload :GalleryImage,       'yoolk_api/sub_resources/gallery_image'
+  autoload :Person,             'yoolk_api/sub_resources/person'
+  autoload :Product,            'yoolk_api/sub_resources/product'
 end
