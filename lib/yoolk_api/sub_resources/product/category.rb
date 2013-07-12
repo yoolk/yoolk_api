@@ -6,9 +6,5 @@ module YoolkApi
       super(attributes)
       @products = products
     end
-
-    class << self
-      undef_method :find
-    end
   end
 end

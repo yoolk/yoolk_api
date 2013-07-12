@@ -1,5 +1,5 @@
 require 'typhoeus'
-require 'json'
+require 'oj'
 
 module YoolkApi
   class Client
@@ -27,8 +27,8 @@ module YoolkApi
       
       if response.success?
         begin
-          JSON.parse(response.body)
-        rescue JSON::ParserError => exception
+          Oj.load(response.body)
+        rescue Oj::ParseError => exception
           raise JsonError.new(env[:body], env[:status], env[:url])
         end
       elsif response.timed_out?
