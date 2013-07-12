@@ -1,12 +1,6 @@
 require 'spec_helper'
 
-describe 'Account' do
-  before(:all) do
-    YoolkApi.setup(
-      domain_name: 'yellowpages-cambodia.dev:3000'
-    )
-  end
-
+describe 'Account', :vcr do
   context "Methods" do
     it "should not have method find" do
       YoolkApi::Account.methods.should_not include(:find)

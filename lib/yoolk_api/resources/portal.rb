@@ -17,7 +17,7 @@ module YoolkApi
         begin
           response = YoolkApi.client.get(api_path(query))
         rescue JsonError, NetworkError, BadRequestError => exception
-          raise NotFoundError.new(exception.response_body, exception.response_status, exception.url)
+          raise NotFoundError.new("YoolkApi::Error, Invalid api_url: #{YoolkApi.client.api_url}", 404, exception.url)
         end
         member response
       end

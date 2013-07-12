@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/categories/kh12093?fields=id,name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"b2fd292564043369a09e09757a25b7a2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7585b3821e87bbbbfa97a58d10afbf5
+      X-Runtime:
+      - '0.044338'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"0809E4EF-6FAB-4AC5-9AB7-1EC76B189242","name":"Precious
+        Stones"},"links":{"parent":"http://yellowpages-cambodia.dev:3000/api/v1/categories/kh12093/parent","listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
+    http_version: 
+  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
+recorded_with: VCR 2.4.0

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/locations/kh2?fields=id,alias_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"90bee7d602032a8073123d8ce4683822"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c92e4c3c0c53f7250547a725814f0a1
+      X-Runtime:
+      - '0.038627'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"alias_id":"kh2","id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC"},"links":{"listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
+    http_version: 
+  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
+recorded_with: VCR 2.4.0

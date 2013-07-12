@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/me?auth_token=gTq7dHBUMzLxGv3oYNiy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"e048ddc45f031b143bea2b5e7f4e7a01"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8c5190ac2fb1f2e750e8e5796662d42f
+      X-Runtime:
+      - '0.036855'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":4575,"email":"chamnap@yoolk.com","confirmed":true,"authentication_token":"gTq7dHBUMzLxGv3oYNiy","created_at":"2010-06-28T09:04:57+07:00","updated_at":"2013-07-12T13:32:44+07:00","roles":[{"name":"Yoolk
+        Admin","resource_type":{},"resource":{}}]}}'
+    http_version: 
+  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
+recorded_with: VCR 2.4.0

@@ -5,6 +5,7 @@ module YoolkApi
 
     def parent
       return nil unless attributes.key?('parent_id')
+      return nil if parent_id.blank?
 
       @parent ||= member YoolkApi.client.get(parent_api_path)
     end

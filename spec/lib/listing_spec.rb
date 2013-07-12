@@ -1,14 +1,11 @@
 require 'spec_helper'
 
-describe 'Portal' do
+describe 'Listing', :vcr do
   before(:all) do
-    YoolkApi.setup(
-      domain_name: 'yellowpages-cambodia.dev:3000'
-    )
     @listing = YoolkApi::Listing.find('kh1223')
   end
 
-  context "Image Resources" do
+  context "Image Resources", :vcr do
     it "get attribute value" do
       @listing.alias_id.should == 'kh1223'
     end
@@ -39,7 +36,7 @@ describe 'Portal' do
       @listing.image_galleries[0].should be_instance_of(YoolkApi::ImageGallery)
     end
 
-    it "#gallery_images should be an arry of YoolkApi::GalleryImage" do
+    it "#gallery_images should be an array of YoolkApi::GalleryImage" do
       image_gallery = @listing.image_galleries[0]
 
       image_gallery.gallery_images.should be_instance_of(Array)

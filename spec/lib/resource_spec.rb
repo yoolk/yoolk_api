@@ -1,12 +1,6 @@
 require 'spec_helper'
 
-describe 'Resource' do
-  before(:all) do
-    YoolkApi.setup(
-      domain_name: 'yellowpages-cambodia.dev:3000'
-    )
-  end
-
+describe 'Resource', :vcr do
   context "Methods" do
     it "returns resource name" do
       YoolkApi::Portal.resource_name.should == 'portals'
@@ -54,10 +48,6 @@ describe 'Resource' do
 
     it "should return true if there is association data" do
       @portal.categories?.should be_true
-    end
-
-    it "should return false if there is association data", :pending do
-      @portal.categories?.should be_false
     end
   end
 
@@ -148,14 +138,14 @@ describe 'Resource' do
     end
 
     it "should return api_path with query_string" do
-      relation = @portal.categories.page(2).per_page(20).fields('id').fields('alias_id').q('hello')
+      relation = @portal.categories.page(2).per_page(1).fields('id').fields('alias_id').q('hello')
 
-      relation.to_api_path.should == '/categories?fields=id%2Calias_id&page=2&per_page=20&q=hello'
+      relation.to_api_path.should == '/categories?fields=id%2Calias_id&page=2&per_page=1&q=hello'
     end
 
     it "should load resource with the specified query options" do
-      listings = @portal.listings.page(2).per_page(20).fields('id').fields('alias_id').q('hello').to_a
-
+      listings = @portal.listings.page(2).per_page(1).fields('id').fields('alias_id').q('hello').to_a
+      
       listings[0].attributes.keys.should == ['alias_id', 'id']
     end
   end

@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/locations/kh2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"a61ee6d09e5a61a564fc0c74261653e1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5440d88d1673c8839061d299102d6da3
+      X-Runtime:
+      - '0.157987'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"alias_id":"kh2","created_time":"2011-03-26T22:59:05+07:00","listing_count":25351,"name":"Phnom
+        Penh","priority":2,"show_on_web":true,"updated_time":"2013-05-03T10:34:43+07:00","id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC","listings":{"data":[{"address":"No.
+        20, Mao Tse Toung (St. 245), 12305 Phnom Penh","addresses":[{"id":"34FA7C18-9CB8-11E0-9107-123141003441","address_field":{"id":"A09124E5-C8BA-9087-AAE1-C3247AB6L876","name":"Postal
+        Code"},"value":"12305"},{"id":"34FB1D62-9CB8-11E0-91C6-123141003441","address_field":{"id":"A09124E5-C8BA-9087-AAC7-C3247AB6L876","name":"Street
+        Name"},"value":"Mao Tse Toung (St. 245)"},{"id":"34FBAD22-9CB8-11E0-A37B-123141003441","address_field":{"id":"A09124E5-C8BA-9087-AAA3-C3247AB6L876","name":"City"},"value":"Phnom
+        Penh"},{"id":"34FBCCE4-9CB8-11E0-8BEF-123141003441","address_field":{"id":"A09124E5-C8BA-9087-AAB5-C3247AB6L876","name":"House
+        Number"},"value":"20"}],"alias_id":"kh44935","alias_names":[],"artwork_assets":[],"artworks":[],"banner_assets":[],"banners":[],"billboard_assets":[],"billboards":[],"business_type":{"id":"329e0760-22a6-11df-87eb-0800279aa8c0","name":"Brand
+        Listing"},"catalog_items":[],"category_position_assets":[],"children":[],"communications":[{"id":"505487E2-9CB8-11E0-812B-123141003441","label":"Tel","type":"Tel","value":"023
+        218 995-7","is_first_line":true,"image_url":""},{"id":"5055D962-9CB8-11E0-A37B-123141003441","label":"Fax","type":"Fax","value":"023
+        218 339","is_first_line":false,"image_url":""},{"id":"5054E192-9CB8-11E0-9107-123141003441","label":"E-Mail","type":"E-Mail","value":"hengasiahp@yahoo.com","is_first_line":false,"image_url":"/email_images/original/missing.png"},{"id":"5055A51E-9CB8-11E0-B441-123141003441","label":"E-Mail","type":"E-Mail","value":"sales@hengasia.com","is_first_line":false,"image_url":"/email_images/original/missing.png"},{"id":"506B7312-9CB8-11E0-80A6-123141003441","label":"Website","type":"Website","value":"www.hengasia.com","is_first_line":false,"image_url":""}],"country":{},"created_by":{},"created_time":"2011-06-22T17:12:00+07:00","custom_assets":[],"description":null,"email":"hengasiahp@yahoo.com","extra_communications":[],"gallery_image_assets":[],"gallery_images":[],"has_map":true,"headline":"","image_galleries":[],"inquiry_assets":[],"installed_apps":[],"is_active":true,"is_international":false,"keyphrases":[],"lat":11.543811669784384,"location":{"id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC","alias_id":"kh2","name":"Phnom
+        Penh"},"location_position_assets":[],"logo":{},"long":104.92139722698971,"media_assets":[],"medias":[],"name":"Heng
+        Asia (VRH)","parent":{"id":"8334B07D-5F39-4325-A9D3-757AADC92760","alias_id":"kh4103","name":"Heng
+        Asia"},"people":[],"postal_code":null,"qrcode_url":"","reject_reason":"","search_position_assets":[],"short_descriptions":[],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"023
+        218 995-7","updated_time":"2013-02-21T20:19:31+07:00","verify_status":"","web_style_assets":[],"website":"www.hengasia.com","zoom_level":15,"id":"117EDF5E-9CB8-11E0-8FFA-123141003441"},{"address":"No.
+        109Eo, Sisowath, corner of Seng Thoung (St. 104), 12204 Phnom Penh","addresses":[{"id":"548D8592-7B9E-11E0-B076-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAD7-C3247AB6L876","name":"Corner
+        of street"},"value":"corner of Seng Thoung (St. 104)"},{"id":"716F2DAA-7B9E-11E0-A623-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAE1-C3247AB6L876","name":"Postal
+        Code"},"value":"12204"},{"id":"D978009A-601C-11E0-8EF4-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAC7-C3247AB6L876","name":"Street
+        Name"},"value":"Sisowath"},{"id":"D9803CE2-601C-11E0-B171-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAB5-C3247AB6L876","name":"House
+        Number"},"value":"109Eo"},{"id":"DF27A2DC-829C-11E0-92D4-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAA3-C3247AB6L876","name":"City"},"value":"Phnom
+        Penh"}],"alias_id":"kh3487","alias_names":[{"id":"5D7C1187-F7E7-450A-A304-CFD2E4914D01","name":"Kampuchea
+        Shipping Agency & Brokers","type":"Known As"}],"artwork_assets":[],"artworks":[],"banner_assets":[],"banners":[],"billboard_assets":[],"billboards":[],"business_type":{"id":"2abd5262-22a6-11df-87eb-0800279aa8c0","name":"Business
+        Listing"},"catalog_items":[],"category_position_assets":[],"children":[{"id":"4A86AD23-CA96-4861-B20F-09F72CB0D25A","alias_id":"kh19222","name":"Kamsab
+        Branch"},{"id":"33E48D96-A318-4F5A-B3E9-D764CAA049A5","alias_id":"kh7588","name":"Kamsab
+        Beach Hotel"}],"communications":[{"id":"AD1C3B26-DF76-498F-BB9F-89F6B78F15F7","label":"Tel","type":"Tel","value":"023
+        725 419","is_first_line":true,"image_url":""},{"id":"098B5828-641E-4FC1-BC29-5E5B3CF93B3A","label":"Tel","type":"Tel","value":"023
+        724 519","is_first_line":false,"image_url":""},{"id":"6D6AD39A-601D-11E0-9D14-1231400045DB","label":"Fax","type":"Fax","value":"023
+        428 620","is_first_line":false,"image_url":""},{"id":"6D6A709E-601D-11E0-AA30-1231400045DB","label":"Fax","type":"Fax","value":"023
+        426 457","is_first_line":false,"image_url":""},{"id":"6D808000-601D-11E0-81BC-1231400045DB","label":"Mobile
+        Phone","type":"Mobile Phone","value":"012 900 258","is_first_line":false,"image_url":""},{"id":"BA499C0E-9C9F-11E1-A2B9-12314000960A","label":"E-Mail","type":"E-Mail","value":"kamsab@online.com.kh","is_first_line":false,"image_url":"/email_images/original/missing.png"},{"id":"CB3FB106-9C9F-11E1-A056-12314000F07E","label":"Website","type":"Website","value":"www.kamsab.com.kh","is_first_line":false,"image_url":""}],"country":{},"created_by":{},"created_time":"1997-03-14T07:00:00+07:00","custom_assets":[],"description":"","email":"kamsab@online.com.kh","extra_communications":[],"gallery_image_assets":[],"gallery_images":[],"has_map":true,"headline":"","image_galleries":[],"inquiry_assets":[],"installed_apps":[],"is_active":true,"is_international":false,"keyphrases":[],"lat":11.5744014087,"location":{"id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC","alias_id":"kh2","name":"Phnom
+        Penh"},"location_position_assets":[],"logo":{},"long":104.927600292,"media_assets":[],"medias":[],"name":"Kamsab","parent":{},"people":[],"postal_code":"12204","qrcode_url":"","reject_reason":"","search_position_assets":[],"short_descriptions":[{"id":"9B9EE5D0-DDA4-11E0-8572-123140009C28","text":"Kampuchea
+        Shipping Agency & Brokers","categories":[{"id":"4600BA4C-3FB8-4CB7-8B3A-215ACBFD3DE6","name":"Customs
+        House Brokers - Customs Clearance"},{"id":"93D3916A-E700-428B-B480-267E26658459","name":"Shipping
+        Line Services & Agencies"},{"id":"2F0C65A3-91D8-4EAD-8D27-4C047A768A1A","name":"Freight
+        Forwarding, Cargo, Transport"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"023
+        725 419","updated_time":"2013-02-21T20:18:10+07:00","verify_status":"","web_style_assets":[],"website":"www.kamsab.com.kh","zoom_level":16,"id":"1CEBA092-9BB9-4A9D-AA48-ECE86D753605"}],"paging":{"total_entries":2,"total_pages":1,"per_page":25,"current_page":1}}},"links":{"listings":"http://yellowpages-cambodia.dev:3000/api/v1/listings"}}'
+    http_version: 
+  recorded_at: Fri, 12 Jul 2013 08:38:52 GMT
+recorded_with: VCR 2.4.0

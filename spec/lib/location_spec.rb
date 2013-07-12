@@ -1,12 +1,6 @@
 require 'spec_helper'
 
-describe 'Location' do
-  before(:all) do
-    YoolkApi.setup(
-      domain_name: 'yellowpages-cambodia.dev:3000'
-    )
-  end
-
+describe 'Location', :vcr do
   context "Methods" do
     it "should return location by identity" do
       location = YoolkApi::Location.find('kh2')
