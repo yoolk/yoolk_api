@@ -60,6 +60,12 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
     listing.image_galleries[0].name
     listing.image_galleries[0].gallery_images
 
+    # Products
+    listing.products[0].name
+    listing.products[0].photos[0].images(:small)
+    listing.product_categories[0].products
+    listing.product_brands[0].products
+
     # Get information about current account
     current_account = YoolkApi::Account.me
     current_account.yoolk_admin?
