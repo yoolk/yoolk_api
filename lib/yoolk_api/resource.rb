@@ -51,11 +51,15 @@ module YoolkApi
     private
 
       def method_missing(method, *args, &block)
-        if attributes.key?(method)
+        if respond_to?(method)
           attributes.send(method, *args, &block)
         else
           super
         end
+      end
+
+      def respond_to?(method)
+        attributes.respond_to?(method)
       end
   end
 end
