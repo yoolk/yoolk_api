@@ -12,7 +12,7 @@ module YoolkApi
   autoload :Client,             'yoolk_api/client'
   autoload :Resource,           'yoolk_api/resource'
   autoload :SubResource,        'yoolk_api/sub_resource'
-  
+
   # resources
   autoload :Portal,             'yoolk_api/resources/portal'
   autoload :Listing,            'yoolk_api/resources/listing'
@@ -28,7 +28,7 @@ module YoolkApi
   autoload :GalleryImage,       'yoolk_api/sub_resources/gallery_image'
   autoload :Person,             'yoolk_api/sub_resources/person'
   autoload :Product,            'yoolk_api/sub_resources/product'
-  
+
   class << self
     def setup(options={})
       YoolkApi.client = YoolkApi::Client.new(options)
@@ -47,7 +47,7 @@ module YoolkApi
 
       begin
         old_client, YoolkApi.client = YoolkApi.client, YoolkApi::Client.new(options)
-        
+
         block.call
       ensure
         YoolkApi.client = old_client

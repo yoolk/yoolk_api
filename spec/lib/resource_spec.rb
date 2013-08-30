@@ -145,27 +145,38 @@ describe 'Resource', :vcr do
 
     it "should load resource with the specified query options" do
       listings = @portal.listings.page(2).per_page(1).fields('id').fields('alias_id').q('hello').to_a
-      
+
       listings[0].attributes.keys.should == ['alias_id', 'id']
     end
   end
-  
+
   describe '#respond_to' do
-    let(:resource) { MySubResource.new(greeting: 'Welcome') } 
-   
+    let(:resource) { MyResource.new(greeting: 'Welcome') }
+
     it 'responds to method name' do
-      expect(resource.respond_to?(:hello)).to be_true 
+      expect(resource.respond_to?(:hello)).to be_true
     end
-    
-    it 'responds attributes key' do
+
+    it 'responds to attributes key' do
       expect(resource.respond_to?(:greeting)).to be_true
+    end
+
+    it "doesn't respond to undefined method" do
+      expect(resource.respond_to?(:undefined)).to be_false
+    end
+
+    it "invokes #method" do
+      expect(resource.method(:greeting)).to be_instance_of(Method)
+    end
+
+    it "invokes #method raise exception" do
+      expect { resource.method(:undefined) }.to raise_error NameError
     end
   end
 end
 
-class MySubResource < YoolkApi::Resource 
+class MyResource < YoolkApi::Resource
   def hello
     "Hello World!"
   end
 end
-

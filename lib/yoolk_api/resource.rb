@@ -49,8 +49,12 @@ module YoolkApi
     end
 
     def respond_to?(method, include_private=false)
-      return true if attributes.respond_to?(method.to_s)
+      return true if attributes.respond_to?(method)
       super
+    end
+
+    def respond_to_missing?(method, include_private=false)
+      attributes.respond_to?(method) || super
     end
 
     private
