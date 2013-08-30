@@ -149,4 +149,23 @@ describe 'Resource', :vcr do
       listings[0].attributes.keys.should == ['alias_id', 'id']
     end
   end
+  
+  describe '#respond_to' do
+    let(:resource) { MySubResource.new(greeting: 'Welcome') } 
+   
+    it 'responds to method name' do
+      expect(resource.respond_to?(:hello)).to be_true 
+    end
+    
+    it 'responds attributes key' do
+      expect(resource.respond_to?(:greeting)).to be_true
+    end
+  end
 end
+
+class MySubResource < YoolkApi::Resource 
+  def hello
+    "Hello World!"
+  end
+end
+

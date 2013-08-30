@@ -48,6 +48,11 @@ module YoolkApi
       alias_id || id
     end
 
+    def respond_to?(method, include_private=false)
+      return true if attributes.respond_to?(method.to_s)
+      super
+    end
+
     private
 
       def method_missing(method, *args, &block)
@@ -58,8 +63,5 @@ module YoolkApi
         end
       end
 
-      def respond_to?(method)
-        attributes.respond_to?(method)
-      end
   end
 end
