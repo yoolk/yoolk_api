@@ -28,6 +28,7 @@ module YoolkApi
   autoload :GalleryImage,       'yoolk_api/sub_resources/gallery_image'
   autoload :Person,             'yoolk_api/sub_resources/person'
   autoload :Product,            'yoolk_api/sub_resources/product'
+  autoload :Food,               'yoolk_api/sub_resources/food'
 
   class << self
     def setup(options={})

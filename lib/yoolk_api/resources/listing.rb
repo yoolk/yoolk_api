@@ -10,6 +10,9 @@ module YoolkApi
     sub_resource :products, class_name: 'Product'
     sub_resource :product_categories, class_name: 'Product::Category', contains: :products
     sub_resource :product_brands, class_name: 'Product::Brand', contains: :products
+    sub_resource :foods, class_name: 'Food'
+    sub_resource :food_categories, class_name: 'Food::Category', contains: :foods
+    sub_resource :menu_sources, class_name: 'Food::MenuSource'
 
     def catalog_items_with_images
       catalog_items.select { |catalog_item| catalog_item.images.present? }
