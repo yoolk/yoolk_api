@@ -53,7 +53,7 @@ The Yoolk API is based on REST requests passing JSON back and forth, but we have
     # Return all images size
     listing.logo.images
 
-    # Return only original images, applied the same to #catalog_items, #gallery_images, #artworks, and #people
+    # Return only original images, applied to any resources which contains images array.
     listing.logo.images(:original)
 
     # Image_galleries and gallery_images
