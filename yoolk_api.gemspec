@@ -17,14 +17,14 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "bundler", ">= 1.2.3"
-  gem.add_development_dependency "rspec", "~> 2.12.0"
+  gem.add_development_dependency "bundler", ">= 1.3.5"
+  gem.add_development_dependency "rspec", "~> 2.14.1"
   gem.add_development_dependency "pry", "~> 0.9.12"
-  gem.add_development_dependency "vcr", "~> 2.5.0"
-  gem.add_development_dependency "webmock", "~> 1.13.0"
+  gem.add_development_dependency "vcr", "~> 2.7.0"
+  gem.add_development_dependency "webmock", "~> 1.15.2"
 
-  gem.add_dependency "activesupport", "~> 3.2.12"
-  gem.add_dependency "hashie", "~> 1.2.0"
-  gem.add_dependency "typhoeus", "~> 0.6.1"
-  gem.add_dependency "oj", "~> 2.1.4"
+  gem.add_dependency "activesupport", ">= 3.2.12"
+  gem.add_dependency "hashie", ">= 2.0.5"
+  gem.add_dependency "typhoeus", "~> 0.6.6"
+  gem.add_dependency "oj", "~> 2.1.7"
 end
