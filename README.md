@@ -10,7 +10,7 @@ This gem depends on [typhoeus](https://github.com/typhoeus/typhoeus) which uses 
 
 Add this line to your application's Gemfile:
 
-    gem 'yoolk_api', git: 'git://github.com/yoolk/yoolk_api.git'
+    gem 'yoolk_api', github: 'yoolk/yoolk_api', tag: 'v0.1.0'
 
 And then execute:
 
