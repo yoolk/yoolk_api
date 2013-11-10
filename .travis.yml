@@ -1,0 +1,14 @@
+language: ruby
+script: "bundle exec rake spec"
+rvm:
+  - 1.9.3
+  - 2.0.0
+env:
+  - CODECLIMATE_REPO_TOKEN=42cf863734a021f74926d99cddd159c48c0c80f7cb39b7b325f56c3931454677
+gemfile:
+  - Gemfile
+notifications:
+  email: false
+addons:
+  code_climate:
+    repo_token: 42cf863734a021f74926d99cddd159c48c0c80f7cb39b7b325f56c3931454677

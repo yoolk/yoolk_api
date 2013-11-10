@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require 'yoolk_api'
 require 'pry'
 require 'vcr'
