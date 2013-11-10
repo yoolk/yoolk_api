@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "pry", "~> 0.9.12"
   gem.add_development_dependency "vcr", "~> 2.7.0"
   gem.add_development_dependency "webmock", "~> 1.15.2"
+  gem.add_development_dependency "rake"
 
   gem.add_dependency "activesupport", ">= 3.2.12"
   gem.add_dependency "hashie", ">= 2.0.5"
