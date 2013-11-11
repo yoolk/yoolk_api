@@ -1,11 +1,13 @@
-require 'yoolk_api/version'
-require 'yoolk_api/error'
 require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/object/to_query'
 require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/module/delegation'
 require 'active_support/core_ext/array/wrap'
 require 'active_support/concern'
+require 'request_store'
+
+require 'yoolk_api/version'
+require 'yoolk_api/error'
 
 module YoolkApi
 
@@ -37,11 +39,11 @@ module YoolkApi
     end
 
     def client
-      Thread.current[:yoolk_client]
+      RequestStore.store[:yoolk_client]
     end
 
     def client=(new_client)
-      Thread.current[:yoolk_client] = new_client
+      RequestStore.store[:yoolk_client] = new_client
     end
 
     def with_client(options={}, &block)
