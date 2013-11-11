@@ -91,6 +91,7 @@ describe 'Listing', 'InstantWebsite', :vcr do
     subject.should be_instance_of(YoolkApi::InstantWebsite)
     subject.id.should == 2
     subject.domain_name.should == 'yellow-tower.com'
+    subject.google_analytics_key.should == 'UA-42159257-17'
     subject.is_live.should == false
   end
 

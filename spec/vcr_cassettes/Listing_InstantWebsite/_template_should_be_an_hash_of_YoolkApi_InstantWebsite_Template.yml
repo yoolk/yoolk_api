@@ -19,13 +19,13 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"d401701c90e99b774008baf852f05b94"'
+      - '"a910f3dfd524effbe1872a28f1cc4948"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 568281f30a90b4ba8d337dbc1d312b39
+      - dc5761a106d49bef0ea532655814e835
       X-Runtime:
-      - '0.169957'
+      - '0.162830'
       Connection:
       - close
       Server:
@@ -63,7 +63,7 @@ http_interactions:
         Gallery Asset","installation_date":"2011-05-18T04:18:49Z"},{"id":"ACA258F6-F344-11E1-8CB3-12314000D85C","name":"Product
         Catalog","installation_date":"2013-07-17T07:37:43Z"},{"id":"E5BB2528-EC1E-11E1-B060-12314000F4E5","name":"Instant
         Website Asset","installation_date":"2013-10-09T04:24:09Z"},{"id":"E8962A4A-8EEC-11DF-94CE-08002791AA7F","name":"Web
-        Style Asset","installation_date":"2011-05-27T10:06:52Z"}],"instant_website":{"id":2,"domain_name":"yellow-tower.com","is_live":false,"template":{"id":26,"name":"basic_business"}},"is_active":true,"is_international":false,"keyphrases":[{"id":"F2685338-CE4B-4E4B-A208-A5F34832DCF0","text":"Hotel","position":2},{"id":"75AD405A-B0F5-11E0-8994-123140009C4D","text":"Hotels","position":3},{"id":"75C0CF94-B0F5-11E0-8DB6-123140009C4D","text":"Spa","position":4},{"id":"762201A6-B0F5-11E0-AADD-123140009C4D","text":"Spas","position":5},{"id":"75C533B8-B0F5-11E0-9710-123140009C4D","text":"Massage","position":6},{"id":"75C715D4-B0F5-11E0-8A1C-123140009C4D","text":"Massages","position":7},{"id":"75C86970-B0F5-11E0-B425-123140009C4D","text":"Banquet","position":8},{"id":"763F6C00-B0F5-11E0-8994-123140009C4D","text":"Catering","position":9},{"id":"766777A4-B0F5-11E0-9710-123140009C4D","text":"Conference
+        Style Asset","installation_date":"2011-05-27T10:06:52Z"}],"instant_website":{"id":2,"domain_name":"yellow-tower.com","google_analytics_key":"UA-42159257-17","is_live":false,"template":{"id":26,"name":"basic_business"}},"is_active":true,"is_international":false,"keyphrases":[{"id":"F2685338-CE4B-4E4B-A208-A5F34832DCF0","text":"Hotel","position":2},{"id":"75AD405A-B0F5-11E0-8994-123140009C4D","text":"Hotels","position":3},{"id":"75C0CF94-B0F5-11E0-8DB6-123140009C4D","text":"Spa","position":4},{"id":"762201A6-B0F5-11E0-AADD-123140009C4D","text":"Spas","position":5},{"id":"75C533B8-B0F5-11E0-9710-123140009C4D","text":"Massage","position":6},{"id":"75C715D4-B0F5-11E0-8A1C-123140009C4D","text":"Massages","position":7},{"id":"75C86970-B0F5-11E0-B425-123140009C4D","text":"Banquet","position":8},{"id":"763F6C00-B0F5-11E0-8994-123140009C4D","text":"Catering","position":9},{"id":"766777A4-B0F5-11E0-9710-123140009C4D","text":"Conference
         Room","position":10},{"id":"768DD624-B0F5-11E0-8DB6-123140009C4D","text":"Saunas","position":11}],"lat":11.578895872742423,"location":{"id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC","alias_id":"kh2","name":"Phnom
         Penh"},"location_position_assets":[],"logo":{"images":[{"width":150,"height":150,"type":"original","url":"/kh/logo_images/original/10361.jpg?1365046093"},{"width":150,"height":150,"type":"large","url":"/kh/logo_images/large/10361.jpg?1365046093"},{"width":150,"height":150,"type":"medium","url":"/kh/logo_images/medium/10361.jpg?1365046093"},{"width":50,"height":50,"type":"small","url":"/kh/logo_images/small/10361.jpg?1365046093"}]},"long":104.91621799542679,"media_assets":[],"medias":[],"menu_sources":[],"name":"Phnom
         Penh Hotel","parent":{},"people":[],"postal_code":"12201","product_brands":[],"product_categories":[],"products":[],"qrcode_url":"/system/listings/62B10B70-95BF-4E70-87A6-9B710EE6D7EB/545d08e2978de8d73bc99f7c0dc41b85.png","reject_reason":"","search_position_assets":[{"id":"7F3EFD1E-2D65-11E2-89B0-12314000C811","keyphrase":"Hotel,Hotels,Spa,Spas,Massage,Massages,Banquet,Catering,Conference
@@ -110,5 +110,5 @@ http_interactions:
         Materials & Supplies"},"parent_id":"092A7D13-11F7-40A3-BEDE-4FD01A980D8B","see_alsos":[],"short_description":"Western
         cuisine"}],"paging":{"total_entries":7,"total_pages":1,"per_page":25,"current_page":1}}},"links":{"categories":"http://yellowpages-cambodia.dev:3000/api/v1/listings/kh8022/categories"}}'
     http_version: 
-  recorded_at: Mon, 11 Nov 2013 03:46:26 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Mon, 11 Nov 2013 09:34:26 GMT
+recorded_with: VCR 2.7.0
