@@ -91,8 +91,13 @@ describe 'Listing', 'InstantWebsite', :vcr do
     subject.should be_instance_of(YoolkApi::InstantWebsite)
     subject.id.should == 2
     subject.domain_name.should == 'yellow-tower.com'
-    subject.template_name.should == 'basic_business'
     subject.is_live.should == false
+  end
+
+  it "#template should be an hash of YoolkApi::InstantWebsite::Template" do
+    subject.template.should be_instance_of(YoolkApi::InstantWebsite::Template)
+    subject.template.id.should == 26
+    subject.template.name.should == 'basic_business'
   end
 end
 
