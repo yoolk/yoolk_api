@@ -29,6 +29,7 @@ module YoolkApi
   autoload :Person,             'yoolk_api/sub_resources/person'
   autoload :Product,            'yoolk_api/sub_resources/product'
   autoload :Food,               'yoolk_api/sub_resources/food'
+  autoload :InstantWebsite,     'yoolk_api/sub_resources/instant_website'
 
   class << self
     def setup(options={})

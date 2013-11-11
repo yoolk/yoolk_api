@@ -13,6 +13,7 @@ module YoolkApi
     sub_resource :foods, class_name: 'Food'
     sub_resource :food_categories, class_name: 'Food::Category', contains: :foods
     sub_resource :menu_sources, class_name: 'Food::MenuSource'
+    sub_resource :instant_website, class_name: 'InstantWebsite'
 
     def catalog_items_with_images
       catalog_items.select { |catalog_item| catalog_item.images.present? }

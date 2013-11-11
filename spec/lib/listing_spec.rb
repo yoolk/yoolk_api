@@ -82,3 +82,17 @@ describe 'Listing', 'Product::Category, Product::Brand, Product::Photo, and Prod
     product_brand.products[0].should be_instance_of(YoolkApi::Product)
   end
 end
+
+describe 'Listing', 'InstantWebsite', :vcr do
+  let(:listing) { YoolkApi::Listing.find('kh8022') }
+  subject       { listing.instant_website }
+
+  it "#instant_website should be an hash of YoolkApi::InstantWebsite" do
+    subject.should be_instance_of(YoolkApi::InstantWebsite)
+    subject.id.should == 2
+    subject.domain_name.should == 'yellow-tower.com'
+    subject.template_name.should == 'basic_business'
+    subject.is_live.should == false
+  end
+end
+
