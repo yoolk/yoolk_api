@@ -27,6 +27,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency "activesupport", ">= 3.2.12"
   gem.add_dependency "hashie", ">= 2.0.5"
   gem.add_dependency "typhoeus", "~> 0.6.6"
-  gem.add_dependency "oj", "~> 2.1.7"
+  gem.add_dependency "oj", "~> 2.2.2"
   gem.add_dependency "request_store", "~> 1.0.5"
 end
