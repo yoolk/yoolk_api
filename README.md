@@ -1,4 +1,4 @@
-# YoolkApi [![Build Status](https://travis-ci.org/yoolk/yoolk_api.png?branch=master)](https://travis-ci.org/yoolk/yoolk_api) [![Code Climate](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/badges/c19085110192a2f43e91/gpa.png)](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/feed)
+# YoolkApi [![Build Status](https://travis-ci.org/yoolk/yoolk_api.png?branch=master)](https://travis-ci.org/yoolk/yoolk_api) [![Code Climate](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/badges/c19085110192a2f43e91/gpa.png)](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/feed) [![Dependency Status](https://gemnasium.com/yoolk/yoolk_api.png)](https://gemnasium.com/yoolk/yoolk_api)
 
 This is the official Ruby client for accessing the Yoolk Portal REST API. It also provides idiomatic Ruby methods for accessing data from yoolk portals. This client library is designed to be minimal and easily integrable into your projects.
 
