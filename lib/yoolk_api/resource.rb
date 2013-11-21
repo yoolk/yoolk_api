@@ -21,6 +21,12 @@ module YoolkApi
         member YoolkApi.client.get(api_path(identity, query))
       end
 
+      def find_by_instant_website(website, query={})
+        client = YoolkApi::Client.new(domain_name: 'yellowpages-cambodia.dev:3000')
+
+        member client.get(api_path(website, query))
+      end
+
       def resource_name
         name.split('::').last.downcase.pluralize
       end

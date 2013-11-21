@@ -20,6 +20,12 @@ module YoolkApi
       self
     end
 
+    def embed(value)
+      @query[:embed] = @query[:embed].to_s + ",#{value}"
+      @query[:embed] = @query[:embed].gsub(/^,/, '')
+      self
+    end
+
     def page(value)
       @query.merge!(page: value)
       self
