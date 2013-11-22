@@ -50,7 +50,9 @@ listing = YoolkApi::Listing.find('kh7364', fields: 'id,name')
 # Fetch listing by instant website
 listing = YoolkApi::Listing.find_instant_website('yellow-tower.com')
 
-# Fetch listing with embed association
+# Auto loading related resource representations
+listing = YoolkApi::Listing.find('kh7364', embed: 'portal')
+listing.portal          # Auto loaded portal of the listing
 
 # Relation
 portal.listings         # Fetch listings under this portal
