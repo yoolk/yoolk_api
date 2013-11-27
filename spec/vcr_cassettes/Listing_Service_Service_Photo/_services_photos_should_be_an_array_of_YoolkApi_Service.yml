@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/listings/kh42884
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"ec88af274276a1889104ff1e0bb857dd"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 588f7d763a64febf06890a7c21fb2320
+      X-Runtime:
+      - '0.279336'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"data":{"address":"Chomnik Village, Anlong Vil Commune, Battambang
+        City xxx xxx, Battambang","addresses":[{"id":"1A9671B8-78E0-4827-8F29-A100DC3B52C5","address_field":{"id":"A09124E5-C8BA-9087-AAE2-C3247AB6L876","name":"Unknown"},"value":"Chomnik
+        Village, Anlong Vil Commune, Battambang City xxx xxx"},{"id":"5A181FD0-82AC-11E0-92D4-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAC3-C3247AB6L876","name":"Province"},"value":"Battambang"}],"alias_id":"kh42884","alias_names":[],"artwork_assets":[],"artworks":[],"banner_assets":[],"banners":[],"billboard_assets":[],"billboards":[],"business_type":{"id":"2abd5262-22a6-11df-87eb-0800279aa8c0","name":"Business
+        Listing"},"catalog_items":[],"category_position_assets":[],"children":[],"communications":[{"id":"2A2C5F09-3628-458B-A4C9-DDD3CB3B6D41","label":"Mobile
+        Phone","type":"Mobile Phone","value":"012 935 878","is_first_line":true,"image_url":""},{"id":"C56E0553-4215-49D6-BACD-37DEB99ED98D","label":"Mobile
+        Phone","type":"Mobile Phone","value":"012 998 122","is_first_line":false,"image_url":""}],"country":{},"created_by":{},"created_time":"2010-12-20T09:23:00+07:00","custom_assets":[],"description":"","email":"","extra_communications":[],"food_categories":[],"foods":[],"gallery_image_assets":[],"gallery_images":[],"has_map":false,"headline":"","image_galleries":[],"inquiry_assets":[],"installed_apps":[{"id":"980D99B6-21A4-11E3-88A3-001E336B09B9","name":"Service
+        Catalog","installation_date":"2013-11-12T10:48:45Z"}],"is_active":true,"is_international":false,"keyphrases":[],"lat":null,"location":{"id":"236948A0-31EA-4B5F-B66D-2E844FF7F024","alias_id":"kh8","name":"Battambang"},"location_position_assets":[],"logo":{},"long":null,"media_assets":[],"medias":[],"menu_sources":[],"name":"Phou
+        Poy Development Import Export","parent":{"id":"AEB38C6D-A001-487D-BB8A-E5D0E206BACE","alias_id":"kh39697","name":"Phou
+        Poy Development Import Export"},"people":[],"postal_code":"","product_brands":[],"product_categories":[],"products":[],"qrcode_url":"","reject_reason":"","search_position_assets":[],"services":[{"id":7,"name":"Test
+        api 1","properties":[],"category":{"id":"027497B7-19AD-4A2C-84BD-1FDF46AAFAEB","name":"Rice
+        Miller Services"},"photos":[{"id":3,"content_type":"image/jpeg","images":[{"width":50,"height":50,"type":"thumbnail","url":"/kh/service_catalog/service_images/thumbnail/3.jpg?1384313203"},{"width":196,"height":151,"type":"small","url":"/kh/service_catalog/service_images/small/3.jpg?1384313203"},{"width":255,"height":197,"type":"medium","url":"/kh/service_catalog/service_images/medium/3.jpg?1384313203"},{"width":255,"height":197,"type":"large","url":"/kh/service_catalog/service_images/large/3.jpg?1384313203"},{"width":255,"height":197,"type":"original","url":"/kh/service_catalog/service_images/original/3.jpg?1384313203"}]},{"id":4,"content_type":"image/jpeg","images":[{"width":50,"height":50,"type":"thumbnail","url":"/kh/service_catalog/service_images/thumbnail/4.jpg?1384313211"},{"width":196,"height":152,"type":"small","url":"/kh/service_catalog/service_images/small/4.jpg?1384313211"},{"width":216,"height":168,"type":"medium","url":"/kh/service_catalog/service_images/medium/4.jpg?1384313211"},{"width":216,"height":168,"type":"large","url":"/kh/service_catalog/service_images/large/4.jpg?1384313211"},{"width":216,"height":168,"type":"original","url":"/kh/service_catalog/service_images/original/4.jpg?1384313211"}]}]},{"id":8,"name":"Test
+        Api 2","properties":[],"category":{"id":"027497B7-19AD-4A2C-84BD-1FDF46AAFAEB","name":"Rice
+        Miller Services"},"photos":[{"id":1,"content_type":"image/jpeg","images":[{"width":50,"height":50,"type":"thumbnail","url":"/kh/service_catalog/service_images/thumbnail/1.jpg?1384309160"},{"width":196,"height":196,"type":"small","url":"/kh/service_catalog/service_images/small/1.jpg?1384309160"},{"width":225,"height":225,"type":"medium","url":"/kh/service_catalog/service_images/medium/1.jpg?1384309160"},{"width":225,"height":225,"type":"large","url":"/kh/service_catalog/service_images/large/1.jpg?1384309160"},{"width":225,"height":225,"type":"original","url":"/kh/service_catalog/service_images/original/1.jpg?1384309160"}]},{"id":2,"content_type":"image/gif","images":[{"width":50,"height":50,"type":"thumbnail","url":"/kh/service_catalog/service_images/thumbnail/2.gif?1384313008"},{"width":196,"height":148,"type":"small","url":"/kh/service_catalog/service_images/small/2.gif?1384313008"},{"width":220,"height":166,"type":"medium","url":"/kh/service_catalog/service_images/medium/2.gif?1384313008"},{"width":220,"height":166,"type":"large","url":"/kh/service_catalog/service_images/large/2.gif?1384313008"},{"width":220,"height":166,"type":"original","url":"/kh/service_catalog/service_images/original/2.gif?1384313008"}]}]},{"id":10,"name":"Test
+        Api 4","properties":[],"category":{"id":"027497B7-19AD-4A2C-84BD-1FDF46AAFAEB","name":"Rice
+        Miller Services"},"photos":[{"id":5,"content_type":"image/jpeg","images":[{"width":50,"height":50,"type":"thumbnail","url":"/kh/service_catalog/service_images/thumbnail/5.jpg?1384313536"},{"width":196,"height":122,"type":"small","url":"/kh/service_catalog/service_images/small/5.jpg?1384313536"},{"width":284,"height":177,"type":"medium","url":"/kh/service_catalog/service_images/medium/5.jpg?1384313536"},{"width":284,"height":177,"type":"large","url":"/kh/service_catalog/service_images/large/5.jpg?1384313536"},{"width":284,"height":177,"type":"original","url":"/kh/service_catalog/service_images/original/5.jpg?1384313536"}]}]}],"short_descriptions":[{"id":"297B0094-B4F5-4152-9EB9-6BB9C667CE17","text":"Rice
+        Miller & Sale","categories":[{"id":"027497B7-19AD-4A2C-84BD-1FDF46AAFAEB","name":"Rice
+        Miller Services"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"","telephone":"012
+        935 878","updated_time":"2013-11-12T17:48:46+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":13,"id":"00010F6E-B02C-4CE4-B8AB-86B60025DAC0","categories":{"data":[],"paging":{"total_entries":0,"total_pages":0,"per_page":25,"current_page":1}}},"links":{"categories":"http://yellowpages-cambodia.dev:3000/api/v1/listings/kh42884/categories"}}'
+    http_version: 
+  recorded_at: Wed, 27 Nov 2013 16:17:44 GMT
+recorded_with: VCR 2.7.0

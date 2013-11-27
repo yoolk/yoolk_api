@@ -82,3 +82,19 @@ describe 'Listing', 'Product::Category, Product::Brand, Product::Photo, and Prod
     product_brand.products[0].should be_instance_of(YoolkApi::Product)
   end
 end
+
+describe 'Listing', 'Service, Service::Photo', :vcr do
+  let(:listing) { YoolkApi::Listing.find('kh42884') }
+
+  it "#services should be an array of YoolkApi::Service" do
+    listing.services.should be_instance_of(Array)
+    listing.services[0].should be_instance_of(YoolkApi::Service)
+  end
+
+  it "#services.#photos should be an array of YoolkApi::Service" do
+    service = listing.services[0]
+
+    service.photos.should be_instance_of(Array)
+    service.photos[0].should be_instance_of(YoolkApi::Service::Photo)
+  end
+end
