@@ -16,4 +16,12 @@ describe YoolkApi do
       expect { YoolkApi.with_client(domain_name: 'yp.com.kh') }.to raise_error(ArgumentError)
     end
   end
+
+  context "setup environment" do
+    it "loads domain_name if environment setup" do
+      YoolkApi.setup(environment: "staging")
+
+      YoolkApi.client.domain_name.should == "apistaging.yoolk.com"
+    end
+  end
 end
