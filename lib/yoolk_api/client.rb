@@ -3,10 +3,11 @@ require 'oj'
 
 module YoolkApi
   class Client
-    attr_reader :api_url, :domain_name, :version
+    attr_reader :api_url, :domain_name, :environment, :version
 
     def initialize(options={})
-      @domain_name = options[:domain_name]
+      @environment = options[:environment]
+      @domain_name = load_domain_name_env(options[:domain_name])
       @version     = options[:version] || 'v1'
       @logger      = options[:logger]  || StdoutLogger.new(options[:debug])
       @api_url     = "http://#{domain_name}/api/#{version}"
@@ -24,7 +25,7 @@ module YoolkApi
         status: response.code,
         body: response.body
       }
-      
+
       if response.success?
         begin
           Oj.load(response.body)
@@ -47,6 +48,16 @@ module YoolkApi
         raise ServerError.new(env[:body], env[:status], env[:url])
       else
         raise ServerError.new(env[:body], env[:status], env[:url])
+      end
+    end
+
+    def load_domain_name_env(domain_name=nil)
+      return domain_name if domain_name.present?
+
+      case environment
+      when 'test', 'development' then 'localhost:3000'
+      when 'staging' then 'apistaging.yoolk.com'
+      when 'production', 'beta' then 'api.yoolk.com'
       end
     end
   end

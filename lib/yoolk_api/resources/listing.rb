@@ -16,6 +16,10 @@ module YoolkApi
     sub_resource :instant_website, class_name: 'InstantWebsite'
     sub_resource :portal, class_name: 'Portal'
 
+    def self.find_by_instant_website(website, query={})
+      member YoolkApi.client.get(api_path(website, query))
+    end
+
     def catalog_items_with_images
       catalog_items.select { |catalog_item| catalog_item.images.present? }
     end
