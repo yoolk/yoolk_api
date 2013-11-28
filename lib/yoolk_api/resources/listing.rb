@@ -13,6 +13,7 @@ module YoolkApi
     sub_resource :foods, class_name: 'Food'
     sub_resource :food_categories, class_name: 'Food::Category', contains: :foods
     sub_resource :menu_sources, class_name: 'Food::MenuSource'
+    sub_resource :services, class_name: 'Service'
 
   end
 end

@@ -77,6 +77,10 @@ listing.foods[0].photos[0].images(:small)
 listing.food_categories[0].foods
 listing.menu_sources[0].images(:small)
 
+# Services
+listing.services[0].name
+listing.services[0].photos[0].images(:small)
+
 # Get information about current account
 current_account = YoolkApi::Account.me
 current_account.yoolk_admin?
