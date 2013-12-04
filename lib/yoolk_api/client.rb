@@ -55,7 +55,7 @@ module YoolkApi
       return domain_name if domain_name.present?
 
       case environment
-      when 'test', 'development' then 'localhost:3000'
+      when 'test', 'development' then 'yellowpages-cambodia.dev:3000'
       when 'staging' then 'apistaging.yoolk.com'
       when 'production', 'beta' then 'api.yoolk.com'
       end
