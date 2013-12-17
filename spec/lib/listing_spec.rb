@@ -98,3 +98,12 @@ describe 'Listing', 'Service, Service::Photo', :vcr do
     service.photos[0].should be_instance_of(YoolkApi::Service::Photo)
   end
 end
+
+describe 'Listing', 'Business Photo', :vcr do
+  let(:listing) { YoolkApi::Listing.find('kh7364') }
+
+  it '#business_photos should be an array of YoolkApi::BusinessPhoto' do
+    expect(listing.business_photos).to be_instance_of(Array)
+    expect(listing.business_photos[0]).to be_instance_of(YoolkApi::BusinessPhoto)
+  end
+end
