@@ -19,13 +19,13 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"3163f4131db5032a6b7fee31a9632716"'
+      - '"6868879d4b479e04d904656ba8fe4e51"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 399988ee2278dab0488354446839f95e
+      - a31fc2b4fb1c4ea1ea0303e480347408
       X-Runtime:
-      - '0.189674'
+      - '0.195779'
       Connection:
       - close
       Server:
@@ -54,10 +54,10 @@ http_interactions:
         Tower","images":[{"width":322,"height":460,"type":"original","url":"/kh/artwork_images/original/218426.jpg?1383733325"},{"width":322,"height":460,"type":"large","url":"/kh/artwork_images/large/218426.jpg?1383733325"},{"width":322,"height":460,"type":"medium","url":"/kh/artwork_images/medium/218426.jpg?1383733325"},{"width":196,"height":280,"type":"small","url":"/kh/artwork_images/small/218426.jpg?1383733325"}]},{"id":"E595398C-46CF-11E3-B988-14109FE41C1D","name":"1371785","text":"","images":[{"width":322,"height":449,"type":"original","url":"/kh/artwork_images/original/218434.jpg?1383734444"},{"width":322,"height":449,"type":"large","url":"/kh/artwork_images/large/218434.jpg?1383734444"},{"width":322,"height":449,"type":"medium","url":"/kh/artwork_images/medium/218434.jpg?1383734444"},{"width":196,"height":273,"type":"small","url":"/kh/artwork_images/small/218434.jpg?1383734444"}]}],"banner_assets":[],"banners":[{"id":"822B04C0-62D7-11E3-8E22-14109FE41C1D","name":"Banner
         120x240","target_url":"http://yellowpages-cambodia.dev:3000/listings/kh7364-camyp-co-ltd","url":"/kh/banner_images/original/218436.jpg?1386816347"},{"id":"A7E17A5C-6636-11E3-A1A0-14109FE41C1D","name":"Banner
         120x240","target_url":"http://yellowpages-cambodia.dev:3000/listings/kh7364-camyp-co-ltd","url":"/kh/banner_images/original/218439.jpg?1387187065"}],"billboard_assets":[],"billboards":[],"business_photos":[{"id":19,"name":"Google
-        Street View111","script":"<iframe width=\"425\" height=\"350\" frameborder=\"0\"
+        Street View111s","embed_script":"<iframe width=\"425\" height=\"350\" frameborder=\"0\"
         scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.co.uk/maps?q=&amp;sll=52.067026,1.110970&amp;cid=12767560646808775800&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;source=embed&amp;ll=52.063893,1.111937&amp;spn=0.004617,0.01266&amp;output=embed\"></iframe><br
         /><small><a href=\"https://maps.google.co.uk/maps?q=&amp;sll=52.067026,1.110970&amp;cid=12767560646808775800&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;source=embed&amp;ll=52.063893,1.111937&amp;spn=0.004617,0.01266\"
-        style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>"},{"id":20,"name":"Google111","script":"<iframe
+        style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>"},{"id":20,"name":"Google111","embed_script":"<iframe
         width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\"
         marginwidth=\"0\" src=\"https://maps.google.co.uk/maps?q=&amp;layer=c&amp;sll=52.059914,1.128661&amp;cid=8921388706543734969&amp;panoid=8J9oKgItEwey2y2iqf27yA&amp;cbp=13,315.56,,0,9.56&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;cbll=52.059951,1.128885&amp;source=embed&amp;ll=52.058629,1.128888&amp;spn=0.004618,0.013947&amp;output=svembed\"></iframe><br
         /><small><a href=\"https://maps.google.co.uk/maps?q=&amp;layer=c&amp;sll=52.059914,1.128661&amp;cid=8921388706543734969&amp;panoid=8J9oKgItEwey2y2iqf27yA&amp;cbp=13,315.56,,0,9.56&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;cbll=52.059951,1.128885&amp;source=embed&amp;ll=52.058629,1.128888&amp;spn=0.004618,0.013947\"
@@ -89,7 +89,7 @@ http_interactions:
         Collection Manager","communications":[],"images":[{"width":229,"height":239,"type":"medium","url":"/global/people/medium/1803984.png?1367290292"},{"width":154,"height":161,"type":"small","url":"/global/people/small/1803984.png?1367290292"}]}],"postal_code":"12301","product_brands":[],"product_categories":[],"products":[],"qrcode_url":"/system/listings/F7B519E8-135C-43D0-A35F-764B582EDC48/311859faca93c4229f6fffcf07c860e4.png","reject_reason":"","search_position_assets":[],"services":[],"short_descriptions":[{"id":"2FF8F0F0-98B1-11E1-976F-12314000960A","text":"Cambodia
         Yellow Pages\nPublished in cooperation with the Ministry of Posts & Telecommunications","categories":[{"id":"28B918EF-4717-437D-BCBE-FC6A14318B13","name":"Directories
         & Guides"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"100178820","telephone":"023
-        432 107","updated_time":"2013-12-16T17:20:59+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":14,"id":"F7B519E8-135C-43D0-A35F-764B582EDC48","categories":{"data":[],"paging":{"total_entries":0,"total_pages":0,"per_page":25,"current_page":1}}},"links":{"categories":"http://yellowpages-cambodia.dev:3000/api/v1/listings/kh7364/categories"}}'
+        432 107","updated_time":"2013-12-17T15:07:26+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":14,"id":"F7B519E8-135C-43D0-A35F-764B582EDC48","categories":{"data":[],"paging":{"total_entries":0,"total_pages":0,"per_page":25,"current_page":1}}},"links":{"categories":"http://yellowpages-cambodia.dev:3000/api/v1/listings/kh7364/categories"}}'
     http_version: 
-  recorded_at: Tue, 17 Dec 2013 07:17:01 GMT
+  recorded_at: Tue, 17 Dec 2013 08:17:15 GMT
 recorded_with: VCR 2.7.0

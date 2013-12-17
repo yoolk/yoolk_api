@@ -83,7 +83,7 @@ listing.services[0].photos[0].images(:small)
 
 # Business Photos
 listing.business_photos[0].name
-listing.business_photos[0].script
+listing.business_photos[0].embed_script
 
 # Get information about current account
 current_account = YoolkApi::Account.me
