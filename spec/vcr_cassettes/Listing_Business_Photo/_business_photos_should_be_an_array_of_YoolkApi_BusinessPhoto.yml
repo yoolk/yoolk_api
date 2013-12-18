@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yellowpages-cambodia.dev:3000/api/v1/listings/kh7364
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"6868879d4b479e04d904656ba8fe4e51"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a31fc2b4fb1c4ea1ea0303e480347408
+      X-Runtime:
+      - '0.195779'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"data":{"address":"No. 191, Tonle Sap Road, Yellow Tower, 1st Floor,
+        Village 1, Sangkat Chroy Changva, 12110 Phnom Penh","addresses":[{"id":"55C54FD2-77B9-11E0-A410-1231400045DB","address_field":{"id":"275769BE-7633-11E0-AEBD-1231400045DB","name":"Floor"},"value":"1st
+        Floor"},{"id":"565F0E12-7569-11E0-B16E-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAA1-C3247AB6L876","name":"Building
+        name"},"value":"Yellow Tower"},{"id":"7A8DFA6A-71C4-11E2-8C90-12314000C811","address_field":{"id":"A09124E5-C8BA-9087-AAD5-C3247AB6L876","name":"Village"},"value":"Village
+        1"},{"id":"8CFE353E-82AB-11E0-92D4-1231400045DB","address_field":{"id":"A09124E5-C8BA-9087-AAA3-C3247AB6L876","name":"City"},"value":"Phnom
+        Penh"},{"id":"B49EE800-71C3-11E2-8A87-123141053E9B","address_field":{"id":"A09124E5-C8BA-9087-AAC7-C3247AB6L876","name":"Street
+        Name"},"value":"Tonle Sap Road"},{"id":"B4C693BE-71C3-11E2-8B6E-123141053E9B","address_field":{"id":"A09124E5-C8BA-9087-AAD9-C3247AB6L876","name":"Sangkat"},"value":"Sangkat
+        Chroy Changva"},{"id":"B617902B-633F-464A-AF45-9E90E36C39DD","address_field":{"id":"A09124E5-C8BA-9087-AAB5-C3247AB6L876","name":"House
+        Number"},"value":"191"},{"id":"C7CE24E7-AAC4-4746-B992-4B72A5852331","address_field":{"id":"A09124E5-C8BA-9087-AAE1-C3247AB6L876","name":"Postal
+        Code"},"value":"12110"}],"alias_id":"kh7364","alias_names":[],"artwork_assets":[],"artworks":[{"id":"3B7F73D2-8568-11E2-B18E-123141053E9B","name":"C:\\fakepath\\photo.jpg","text":null,"images":[{"width":2448,"height":3264,"type":"original","url":"/kh/artwork_images/original/10377.jpg?1365046126"},{"width":994,"height":1325,"type":"large","url":"/kh/artwork_images/large/10377.jpg?1365046126"},{"width":322,"height":429,"type":"medium","url":"/kh/artwork_images/medium/10377.jpg?1365046126"},{"width":196,"height":261,"type":"small","url":"/kh/artwork_images/small/10377.jpg?1365046126"}]},{"id":"4A91F53A-46CD-11E3-B988-14109FE41C1D","name":"10615","text":"l
+        Brand new office space available \n from only $5 psqm.\n\nl Located opposite
+        the Royal Palace\n across the Tonle Sap river offering \n fantastic views,
+        tranquillity and\n minimal traffic congestion.\n l 7 stories of offices measuring
+        \n between 385 m\u00b2 - 660 m\u00b2 (including \n ancillary areas).\n\t\t
+        \nl Accessible by frequent ferry \n crossings or via the Chroy Changvar \n
+        bridge. Additional new bridge is \n under construction.\n\nl Excellent natural
+        light, fresh air \n supply and IT facilities. Balcony \n areas on each floor
+        providing ideal \n \u201cbreak-out\u201d areas.\n\nl Each office has high
+        5 metre ceilings,\n creating a spacious environment in\n which to work. \n\nYellow
+        Tower","images":[{"width":322,"height":460,"type":"original","url":"/kh/artwork_images/original/218426.jpg?1383733325"},{"width":322,"height":460,"type":"large","url":"/kh/artwork_images/large/218426.jpg?1383733325"},{"width":322,"height":460,"type":"medium","url":"/kh/artwork_images/medium/218426.jpg?1383733325"},{"width":196,"height":280,"type":"small","url":"/kh/artwork_images/small/218426.jpg?1383733325"}]},{"id":"E595398C-46CF-11E3-B988-14109FE41C1D","name":"1371785","text":"","images":[{"width":322,"height":449,"type":"original","url":"/kh/artwork_images/original/218434.jpg?1383734444"},{"width":322,"height":449,"type":"large","url":"/kh/artwork_images/large/218434.jpg?1383734444"},{"width":322,"height":449,"type":"medium","url":"/kh/artwork_images/medium/218434.jpg?1383734444"},{"width":196,"height":273,"type":"small","url":"/kh/artwork_images/small/218434.jpg?1383734444"}]}],"banner_assets":[],"banners":[{"id":"822B04C0-62D7-11E3-8E22-14109FE41C1D","name":"Banner
+        120x240","target_url":"http://yellowpages-cambodia.dev:3000/listings/kh7364-camyp-co-ltd","url":"/kh/banner_images/original/218436.jpg?1386816347"},{"id":"A7E17A5C-6636-11E3-A1A0-14109FE41C1D","name":"Banner
+        120x240","target_url":"http://yellowpages-cambodia.dev:3000/listings/kh7364-camyp-co-ltd","url":"/kh/banner_images/original/218439.jpg?1387187065"}],"billboard_assets":[],"billboards":[],"business_photos":[{"id":19,"name":"Google
+        Street View111s","embed_script":"<iframe width=\"425\" height=\"350\" frameborder=\"0\"
+        scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.co.uk/maps?q=&amp;sll=52.067026,1.110970&amp;cid=12767560646808775800&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;source=embed&amp;ll=52.063893,1.111937&amp;spn=0.004617,0.01266&amp;output=embed\"></iframe><br
+        /><small><a href=\"https://maps.google.co.uk/maps?q=&amp;sll=52.067026,1.110970&amp;cid=12767560646808775800&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;source=embed&amp;ll=52.063893,1.111937&amp;spn=0.004617,0.01266\"
+        style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>"},{"id":20,"name":"Google111","embed_script":"<iframe
+        width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\"
+        marginwidth=\"0\" src=\"https://maps.google.co.uk/maps?q=&amp;layer=c&amp;sll=52.059914,1.128661&amp;cid=8921388706543734969&amp;panoid=8J9oKgItEwey2y2iqf27yA&amp;cbp=13,315.56,,0,9.56&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;cbll=52.059951,1.128885&amp;source=embed&amp;ll=52.058629,1.128888&amp;spn=0.004618,0.013947&amp;output=svembed\"></iframe><br
+        /><small><a href=\"https://maps.google.co.uk/maps?q=&amp;layer=c&amp;sll=52.059914,1.128661&amp;cid=8921388706543734969&amp;panoid=8J9oKgItEwey2y2iqf27yA&amp;cbp=13,315.56,,0,9.56&amp;gl=GB&amp;hl=en&amp;ie=UTF8&amp;hq=+loc:+&amp;hnear=&amp;t=h&amp;cbll=52.059951,1.128885&amp;source=embed&amp;ll=52.058629,1.128888&amp;spn=0.004618,0.013947\"
+        style=\"color:#0000FF;text-align:left\">View Larger Map</a></small>"}],"business_type":{"id":"2abd5262-22a6-11df-87eb-0800279aa8c0","name":"Business
+        Listing"},"catalog_items":[{"id":"511D09CC-46CC-11E3-B988-14109FE41C1D","title":"just
+        test","html_text":"test","show_image":true,"is_published":true,"images":[{"width":322,"height":449,"type":"original","url":"/kh/catalog_item_images/original/218423.jpg?1383732908"},{"width":322,"height":449,"type":"large","url":"/kh/catalog_item_images/large/218423.jpg?1383732908"},{"width":322,"height":449,"type":"medium","url":"/kh/catalog_item_images/medium/218423.jpg?1383732908"},{"width":196,"height":273,"type":"small","url":"/kh/catalog_item_images/small/218423.jpg?1383732908"}]},{"id":"F4B78220-5D91-11E3-8618-14109FE41C1D","title":"just
+        test","html_text":"ts","show_image":true,"is_published":true,"images":[{"width":1241,"height":1749,"type":"original","url":"/kh/catalog_item_images/original/218435.png?1386236705"},{"width":994,"height":1401,"type":"large","url":"/kh/catalog_item_images/large/218435.png?1386236705"},{"width":322,"height":454,"type":"medium","url":"/kh/catalog_item_images/medium/218435.png?1386236705"},{"width":196,"height":276,"type":"small","url":"/kh/catalog_item_images/small/218435.png?1386236705"}]}],"category_position_assets":[],"children":[{"id":"4BE3B910-C6E5-11E0-A8CB-12314000DA2B","alias_id":"kh46023","name":"Cambodia
+        Yellow Pages"},{"id":"FDA383B5-7DAE-41C3-B1B6-D9CB802900F9","alias_id":"kh42649","name":"Yellow
+        Pages Directory Assistance"}],"communications":[{"id":"E37F4C0E-0ADF-49CE-8BB3-484A543296BE","label":"Tel","type":"Tel","value":"023
+        432 107","is_first_line":true,"image_url":""},{"id":"BD52F018-DF3E-11E0-8722-123140009C28","label":"Fax","type":"Fax","value":"023
+        432 101","is_first_line":false,"image_url":""},{"id":"566D3F74-6508-11E2-A53D-123141053E9B","label":"E-Mail","type":"E-Mail","value":"info@yp.com.kh","is_first_line":false,"image_url":"/kh/communications/original/566D3F74-6508-11E2-A53D-123141053E9B.gif20130405-23429-1fwce4?1365126263"}],"country":{"id":"D3971F5A-5C14-11E0-A079-1231400045DB","name":"Cambodia"},"created_by":{},"created_time":"1999-03-03T07:00:00+07:00","custom_assets":[],"description":"","email":"info@yp.com.kh","extra_communications":[],"food_categories":[],"foods":[],"gallery_image_assets":[],"gallery_images":[{"caption":"1371785","image_gallery":{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"},"images":[{"width":322,"height":449,"type":"original","url":"/kh/gallery_images/original/218418.jpg?1383731898"},{"width":322,"height":449,"type":"large","url":"/kh/gallery_images/large/218418.jpg?1383731898"},{"width":322,"height":449,"type":"medium","url":"/kh/gallery_images/medium/218418.jpg?1383731898"},{"width":196,"height":273,"type":"small","url":"/kh/gallery_images/small/218418.jpg?1383731898"}]},{"caption":"10615","image_gallery":{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"},"images":[{"width":322,"height":460,"type":"original","url":"/kh/gallery_images/original/218419.jpg?1383731899"},{"width":322,"height":460,"type":"large","url":"/kh/gallery_images/large/218419.jpg?1383731899"},{"width":322,"height":460,"type":"medium","url":"/kh/gallery_images/medium/218419.jpg?1383731899"},{"width":196,"height":280,"type":"small","url":"/kh/gallery_images/small/218419.jpg?1383731899"}]},{"caption":"219518
+        002","image_gallery":{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"},"images":[{"width":1600,"height":1067,"type":"original","url":"/kh/gallery_images/original/218420.jpg?1383731931"},{"width":994,"height":663,"type":"large","url":"/kh/gallery_images/large/218420.jpg?1383731931"},{"width":322,"height":215,"type":"medium","url":"/kh/gallery_images/medium/218420.jpg?1383731931"},{"width":196,"height":131,"type":"small","url":"/kh/gallery_images/small/218420.jpg?1383731931"}]},{"caption":"1371785","image_gallery":{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"},"images":[{"width":322,"height":449,"type":"original","url":"/kh/gallery_images/original/218422.jpg?1383732203"},{"width":322,"height":449,"type":"large","url":"/kh/gallery_images/large/218422.jpg?1383732203"},{"width":322,"height":449,"type":"medium","url":"/kh/gallery_images/medium/218422.jpg?1383732203"},{"width":196,"height":273,"type":"small","url":"/kh/gallery_images/small/218422.jpg?1383732203"}]},{"caption":"10615","image_gallery":{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"},"images":[{"width":322,"height":460,"type":"original","url":"/kh/gallery_images/original/218433.jpg?1383734333"},{"width":322,"height":460,"type":"large","url":"/kh/gallery_images/large/218433.jpg?1383734333"},{"width":322,"height":460,"type":"medium","url":"/kh/gallery_images/medium/218433.jpg?1383734333"},{"width":196,"height":280,"type":"small","url":"/kh/gallery_images/small/218433.jpg?1383734333"}]}],"has_map":true,"headline":"","image_galleries":[{"id":"FAC8B484-46C8-11E3-9E4A-14109FE41C1D","name":"Yoolk"}],"inquiry_assets":[],"installed_apps":[{"id":"0207DA22-85BF-11E0-9849-080027FBD74E","name":"Search
+        Position Asset","installation_date":"2011-06-07T06:45:05Z"},{"id":"10708FF8-FE4C-11E1-ADC8-12314000F4E5","name":"Menu","installation_date":"2013-12-12T07:43:07Z"},{"id":"1FDEE97E-6306-11E3-A9FC-14109FE41C1D","name":"Facebook","installation_date":"2013-12-12T08:19:49Z"},{"id":"21119326-560d-11e1-b6c5-08002769be8d","name":"Location
+        Position Asset","installation_date":"2012-07-20T02:07:46Z"},{"id":"2ABD6320-EE15-11DF-9F95-08002762973F","name":"Book
+        Style Asset","installation_date":"2010-12-30T04:09:09Z"},{"id":"381089A0-082B-11E0-9222-080027621785","name":"Banner
+        Asset","installation_date":"2011-07-22T03:49:02Z"},{"id":"3957EB6A-BF1D-11E0-9A17-080027431360","name":"Category
+        Position Asset","installation_date":"2011-10-04T08:08:28Z"},{"id":"51651720-9F52-11E2-BCCD-12314002D804","name":"Custom
+        Asset","installation_date":"2013-12-11T02:50:46Z"},{"id":"51676016-6F24-11E1-9EA5-08002769BE8D","name":"Video
+        Asset","installation_date":"2012-03-19T02:43:32Z"},{"id":"799BEF76-77B6-11E1-8208-080027F64CBB","name":"Brochure
+        Asset","installation_date":"2012-05-01T03:27:43Z"},{"id":"A41154E5-A3CB-4522-942F-C3247AB6L004","name":"Image
+        Gallery Asset","installation_date":"2010-06-28T01:37:56Z"},{"id":"ACA258F6-F344-11E1-8CB3-12314000D85C","name":"Product
+        Catalog","installation_date":"2012-09-04T07:31:59Z"},{"id":"C81EBF12-3F9B-11E3-9662-14109FE41C1D","name":"Assignment","installation_date":"2013-10-28T06:42:36Z"},{"id":"E26DACD4-3F9B-11E3-9662-14109FE41C1D","name":"Note","installation_date":"2013-10-28T06:42:38Z"},{"id":"E360F926-5D59-11E3-8331-14109FE41C1D","name":"GPlus
+        Asset","installation_date":"2013-12-05T03:04:58Z"},{"id":"E8962A4A-8EEC-11DF-94CE-08002791AA7F","name":"Web
+        Style Asset","installation_date":"2012-01-17T04:23:35Z"},{"id":"FF6A30AC-0E4B-11E0-AE09-08002762973F","name":"Billboard
+        Asset","installation_date":"2010-12-31T04:21:53Z"}],"is_active":true,"is_international":false,"keyphrases":[{"id":"08066252-77EC-11E1-96EE-12314000960A","text":"advertising","position":1}],"lat":11.574302136424594,"location":{"id":"01834EE1-FA95-48DE-831A-3D3C05DD3AFC","alias_id":"kh2","name":"Phnom
+        Penh"},"location_position_assets":[],"logo":{},"long":104.93494145572186,"media_assets":[],"medias":[{"id":109,"embed_script":"<iframe
+        width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/AdMVNKwP-8k\" frameborder=\"0\"
+        allowfullscreen></iframe>"}],"menu_sources":[],"name":"CamYP Co., Ltd.","parent":{},"people":[{"id":1803984,"title":"Mr.","first_name":"Pros","last_name":"Chea","languages":[],"nationality":"Cambodian","position_level":{"id":"AB0CD020-DDC4-11E0-A978-080027FBD74E","name":"Manager"},"position_title":"Data
+        Collection Manager","communications":[],"images":[{"width":229,"height":239,"type":"medium","url":"/global/people/medium/1803984.png?1367290292"},{"width":154,"height":161,"type":"small","url":"/global/people/small/1803984.png?1367290292"}]}],"postal_code":"12301","product_brands":[],"product_categories":[],"products":[],"qrcode_url":"/system/listings/F7B519E8-135C-43D0-A35F-764B582EDC48/311859faca93c4229f6fffcf07c860e4.png","reject_reason":"","search_position_assets":[],"services":[],"short_descriptions":[{"id":"2FF8F0F0-98B1-11E1-976F-12314000960A","text":"Cambodia
+        Yellow Pages\nPublished in cooperation with the Ministry of Posts & Telecommunications","categories":[{"id":"28B918EF-4717-437D-BCBE-FC6A14318B13","name":"Directories
+        & Guides"}]}],"show_map_on_web":true,"source":{},"stats":{"billboard_clicks":0,"email_clicks":0,"sponsor_views":0,"views":0,"website_clicks":0,"yearmonths":{}},"tax_number":"100178820","telephone":"023
+        432 107","updated_time":"2013-12-17T15:07:26+07:00","verify_status":"","web_style_assets":[],"website":"","zoom_level":14,"id":"F7B519E8-135C-43D0-A35F-764B582EDC48","categories":{"data":[],"paging":{"total_entries":0,"total_pages":0,"per_page":25,"current_page":1}}},"links":{"categories":"http://yellowpages-cambodia.dev:3000/api/v1/listings/kh7364/categories"}}'
+    http_version: 
+  recorded_at: Tue, 17 Dec 2013 08:17:15 GMT
+recorded_with: VCR 2.7.0

@@ -32,6 +32,7 @@ module YoolkApi
   autoload :Product,            'yoolk_api/sub_resources/product'
   autoload :Food,               'yoolk_api/sub_resources/food'
   autoload :Service,            'yoolk_api/sub_resources/service'
+  autoload :BusinessPhoto,       'yoolk_api/sub_resources/business_photo'
 
   class << self
     def setup(options={})
