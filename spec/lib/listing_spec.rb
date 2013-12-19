@@ -102,3 +102,27 @@ describe 'Listing', 'InstantWebsite', :vcr do
   end
 end
 
+describe 'Listing', 'Service, Service::Photo', :vcr do
+  let(:listing) { YoolkApi::Listing.find('kh42884') }
+
+  it "#services should be an array of YoolkApi::Service" do
+    listing.services.should be_instance_of(Array)
+    listing.services[0].should be_instance_of(YoolkApi::Service)
+  end
+
+  it "#services.#photos should be an array of YoolkApi::Service" do
+    service = listing.services[0]
+
+    service.photos.should be_instance_of(Array)
+    service.photos[0].should be_instance_of(YoolkApi::Service::Photo)
+  end
+end
+
+describe 'Listing', 'Business Photo', :vcr do
+  let(:listing) { YoolkApi::Listing.find('kh7364') }
+
+  it '#business_photos should be an array of YoolkApi::BusinessPhoto' do
+    expect(listing.business_photos).to be_instance_of(Array)
+    expect(listing.business_photos[0]).to be_instance_of(YoolkApi::BusinessPhoto)
+  end
+end

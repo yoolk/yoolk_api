@@ -15,6 +15,8 @@ module YoolkApi
     sub_resource :menu_sources, class_name: 'Food::MenuSource'
     sub_resource :instant_website, class_name: 'InstantWebsite'
     sub_resource :portal, class_name: 'Portal'
+    sub_resource :services, class_name: 'Service'
+    sub_resource :business_photos, class_name: "BusinessPhoto"
 
     def self.find_by_instant_website(website, query={})
       member YoolkApi.client.get(api_path(website, query))
@@ -23,5 +25,6 @@ module YoolkApi
     def catalog_items_with_images
       catalog_items.select { |catalog_item| catalog_item.images.present? }
     end
+
   end
 end

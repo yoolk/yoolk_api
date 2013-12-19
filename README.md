@@ -1,4 +1,4 @@
-# YoolkApi [![Build Status](https://travis-ci.org/yoolk/yoolk_api.png?branch=master)](https://travis-ci.org/yoolk/yoolk_api) [![Code Climate](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/badges/c19085110192a2f43e91/gpa.png)](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/feed) [![Dependency Status](https://gemnasium.com/yoolk/yoolk_api.png)](https://gemnasium.com/yoolk/yoolk_api)
+# YoolkApi [![Build Status](https://travis-ci.org/yoolk/yoolk_api.png?branch=master)](https://travis-ci.org/yoolk/yoolk_api) [![Code Climate](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/badges/c19085110192a2f43e91/gpa.png)](https://codeclimate.com/repos/527f0090c7f3a35566082bf4/feed) [![Dependency Status](https://gemnasium.com/yoolk/yoolk_api.png)](https://gemnasium.com/yoolk/yoolk_api) [![Coverage Status](https://coveralls.io/repos/yoolk/yoolk_api/badge.png?branch=master)](https://coveralls.io/r/yoolk/yoolk_api?branch=master)
 
 This is the official Ruby client for accessing the Yoolk Portal REST API. It also provides idiomatic Ruby methods for accessing data from yoolk portals. This client library is designed to be minimal and easily integrable into your projects.
 
@@ -87,6 +87,14 @@ listing.foods[0].photos[0].images(:small)
 listing.food_categories[0].foods
 listing.menu_sources[0].images(:small)
 
+# Services
+listing.services[0].name
+listing.services[0].photos[0].images(:small)
+
+# Business Photos
+listing.business_photos[0].name
+listing.business_photos[0].embed_script
+
 # Get information about current account
 current_account = YoolkApi::Account.me
 current_account.yoolk_admin?
@@ -140,18 +148,6 @@ class ApplicationController < ActionController::Base
   protected
   def setup_yoolk_api(&block)
     YoolkApi.with_client({domain_name: params[:domain_name]}, &block)
-  end
-end
-```
-
-While the models can be used directly from this gem, we encourage everyone using YoolkApi in a Rails project to add models that extend the standard models:
-
-```ruby
-class Listing < YoolkApi::Listing # Inherits from the Listing model in the YoolkApi gem
-
-  # Your custom methods, e.g.:
-  def code
-    alias_id.to_s.gsub(/\D/, '')
   end
 end
 ```
